@@ -64,7 +64,7 @@ jobs:
           cd cheatsheets-ng
           yarn --frozen-lockfile
 
-      - run: yarn build
+      - run: cd cheatsheets-ng && yarn build
 
       - name: "Deploy to gh-pages 🚀" 
         uses: JamesIves/github-pages-deploy-action@releases/v3

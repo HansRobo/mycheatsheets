@@ -63,8 +63,6 @@ jobs:
         run: |
           cd cheatsheets-ng
           yarn --frozen-lockfile
-          bundle config path vendor/bundle
-          bundle install --jobs 4 --retry 3
 
       - run: yarn build
 

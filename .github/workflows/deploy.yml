@@ -25,8 +25,10 @@ jobs:
             git clone --recursive --depth=1 https://github.com/rstacruz/cheatsheets.git ./
             rm *.md
             git clone https://github.com/HansRobo/mycheatsheets.git 
-            cp -f mycheatsheets/categories.yml _data/
-            
+            cp -r mycheatsheets/sheets ./
+            cp -f -r mycheatsheets/_data _data/
+            rm -rf mycheatsheets
+
       # https://github.com/actions/cache/blob/master/examples.md#node---yarn
       - name: "Cache: Get yarn cache directory path"
         id: yarn-cache-dir-path

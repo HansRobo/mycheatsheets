@@ -20,9 +20,11 @@ jobs:
           # 😊
 
       - uses: actions/checkout@v2
-        shell: bash
         with:
           persist-credentials: false
+      
+      - name: "Checkout submodule"
+        shell: bash
         run: |
             auth_header="$(git config --local --get http.https://github.com/.extraheader)"
             git submodule sync --recursive

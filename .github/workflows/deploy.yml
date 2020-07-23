@@ -28,6 +28,7 @@ jobs:
             git clone https://github.com/HansRobo/mycheatsheets.git 
             cp  mycheatsheets/sheets/*.md ./
             cp -f -r mycheatsheets/_data _data/
+            cp -f -r mycheatsheets/_root ./
             rm -rf mycheatsheets
 
       # https://github.com/actions/cache/blob/master/examples.md#node---yarn

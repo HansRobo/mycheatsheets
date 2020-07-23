@@ -20,8 +20,13 @@ jobs:
           # 😊
 
       - uses: actions/checkout@v2
+        shell: bash
         with:
           persist-credentials: false
+        run: |
+            auth_header="$(git config --local --get http.https://github.com/.extraheader)"
+            git submodule sync --recursive
+            git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1
 
       # https://github.com/actions/cache/blob/master/examples.md#node---yarn
       - name: "Cache: Get yarn cache directory path"

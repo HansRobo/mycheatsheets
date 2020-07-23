@@ -66,9 +66,9 @@
   "tags": null,
   "updated": null
 },{
-  "id": "mycheatsheets/sheets/ros",
+  "id": "sheets/ros",
   "title": "ROS",
-  "url": "/mycheatsheets/sheets/ros",
+  "url": "/sheets/ros",
   "category": "ROS",
   "keywords": null,
   "content_html": "<h2 class=\"-three-column\" id=\"getting-started\">Getting started</h2>\n\n<h3 id=\"rqt\">rqt</h3>\n<h4 id=\"rqt-1\">rqt</h4>\n<h4 id=\"rqt_graph\">rqt_graph</h4>\n<h4 id=\"rqt_plot\">rqt_plot</h4>\n<h4 id=\"rqt_topic\">rqt_topic</h4>\n<h4 id=\"rqt_dep\">rqt_dep</h4>\n<h4 id=\"rqt_bag\">rqt_bag</h4>\n<h4 id=\"rqt_console\">rqt_console</h4>\n<h4 id=\"rqt_image_view\">rqt_image_view</h4>\n<h4 id=\"rqt_shell\">rqt_shell</h4>\n<h4 id=\"rqt_logger_level\">rqt_logger_level</h4>\n<h4 id=\"making-rqt-plugin\">making rqt plugin</h4>\n\n<h3 id=\"rviz\">rviz</h3>\n<h4 id=\"making-rviz-tool-plugin\">making rviz tool plugin</h4>\n<h4 id=\"making-rviz-panel-plugin\">making rviz panel plugin</h4>\n\n<h3 id=\"command\">command</h3>\n<h4 id=\"rosrun\">rosrun</h4>\n<h4 id=\"roslaunch\">roslaunch</h4>\n<h4 id=\"rosbag\">rosbag</h4>\n<h4 id=\"roscore\">roscore</h4>\n<h4 id=\"rosparam\">rosparam</h4>\n<h4 id=\"rostopic\">rostopic</h4>\n\n<h3 id=\"catkin\">catkin</h3>\n<h4 id=\"catkin-command\">catkin command</h4>\n\n<!-- | Shortcut     | Description               |\n| ---          | ---                       |\n| `b` _/_ `w`  | Previous/next word        |\n| `ge` _/_ `e` | Previous/next end of word |\n{: .-shortcuts} -->\n\n<h4 id=\"catkin-cmake\">catkin cmake</h4>\n\n<!-- | Shortcut     | Description                        |\n| ---          | ---                                |\n| `0` _(zero)_ | Start of line                      |\n| `^`          | Start of line _(after whitespace)_ |\n| `$`          | End of line                        |\n{: .-shortcuts} -->\n<h3 id=\"navigation-stack\">Navigation Stack</h3>\n\n<h4 id=\"local-planner\">local planner</h4>\n\n<!-- | `fc`  | Go forward to character `c`  |\n| `Fc`  | Go backward to character `c` |\n{: .-shortcuts} -->\n\n<h4 id=\"global-planner\">global planner</h4>\n<h3 id=\"gazebo\">gazebo</h3>\n\n<h3 id=\"choreonoid\">choreonoid</h3>\n<h4 id=\"choreonoid_ros\">choreonoid_ros</h4>\n\n<h3 id=\"ros_control\">ros_control</h3>\n\n<h2 id=\"also-see\">Also see</h2>\n\n<!-- - [Vim cheatsheet](https://vim.rtorr.com/) _(vim.rotrr.com)_\n- [Vim documentation](http://vimdoc.sourceforge.net/htmldoc/) _(vimdoc.sourceforge.net)_\n- [Interactive Vim tutorial](http://openvim.com/) _(openvim.com)_ -->",
@@ -94,17 +94,6 @@
   "category": "Others",
   "keywords": null,
   "content_html": "<p>{}</p>",
-  "intro_html": "",
-  "description_html": "",
-  "tags": null,
-  "updated": null
-},{
-  "id": "mycheatsheets/",
-  "title": "mycheatsheets",
-  "url": "/mycheatsheets/",
-  "category": "Others",
-  "keywords": null,
-  "content_html": "<h1 id=\"mycheatsheets\">mycheatsheets</h1>",
   "intro_html": "",
   "description_html": "",
   "tags": null,

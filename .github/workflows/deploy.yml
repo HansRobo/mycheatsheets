@@ -18,17 +18,13 @@ jobs:
           # only generated as an emergency fallback in case Netlify goes down.
           # 
           # 😊
-
-      - uses: actions/checkout@v2
-        with:
-          persist-credentials: false
       
-      - name: "Checkout submodule"
+      - name: "clone repos"
         shell: bash
         run: |
             git clone --recursive --depth=1 https://github.com/rstacruz/cheatsheets.git ./
             rm *.md
-            git clone https://github.com/HansRobo/mycheatsheets.git ./
+            git clone https://github.com/HansRobo/mycheatsheets.git 
       # https://github.com/actions/cache/blob/master/examples.md#node---yarn
       - name: "Cache: Get yarn cache directory path"
         id: yarn-cache-dir-path

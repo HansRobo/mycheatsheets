@@ -61,10 +61,12 @@ jobs:
 
       - name: Setup dependencies
         run: |
-          cd cheatsheets-ng
+          cd cheatsheets
           yarn --frozen-lockfile
+          bundle config path vendor/bundle
+          bundle install --jobs 4 --retry 3
 
-      - run: cd cheatsheets-ng && yarn build
+      - run: cd cheatsheets && yarn build
 
       - name: "Deploy to gh-pages 🚀" 
         uses: JamesIves/github-pages-deploy-action@releases/v3

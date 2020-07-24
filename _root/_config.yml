@@ -56,10 +56,10 @@ defaults:
 
 # Site info
 
-url: https://hansrobo.github.io/cheatsheets
+url: https://hansrobo.github.io/mycheatsheets
 title: hansrobo.github.io cheatsheets
 
 # GitHub metadata
 # https://help.github.com/articles/repository-metadata-on-github-pages/
 
-repository: HansRobo/cheatsheets
+repository: HansRobo/mycheatsheets

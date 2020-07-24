@@ -1,5 +1,5 @@
 {
-  "name": "cheatsheets",
+  "name": "mycheatsheets",
   "description": "Devhints.io",
   "version": "1.0.0",
   "author": "Rico Sta. Cruz <rstacruz@users.noreply.github.com>",
@@ -37,7 +37,7 @@
   "license": "MIT",
   "main": "index.js",
   "private": true,
-  "repository": "https://github.com/HansRobo/cheatsheets.git",
+  "repository": "https://github.com/HansRobo/mycheatsheets.git",
   "scripts": {
     "build": "run-s -s 'parcel:*:build' jekyll:build",
     "dev": "run-p -sl jekyll:watch 'parcel:*:watch'",

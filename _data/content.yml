@@ -7,7 +7,7 @@ top_nav:
   edit_on_github: Edit this page on GitHub
 
 sheet:
-  suffix: cheatsheet
+  suffix: mycheatsheet
 
 social_list:
   default_description: "Ridiculous collection of web development cheatsheets"

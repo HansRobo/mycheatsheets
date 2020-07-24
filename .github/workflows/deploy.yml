@@ -29,6 +29,7 @@ jobs:
             cp  mycheatsheets/sheets/*.md ./
             cp -f -r mycheatsheets/_data _data/
             cp -f -r mycheatsheets/_root ./
+            cp -f -r mycheatsheets/_layouts ./
             rm -rf mycheatsheets
 
       # https://github.com/actions/cache/blob/master/examples.md#node---yarn

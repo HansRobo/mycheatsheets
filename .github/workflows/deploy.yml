@@ -23,7 +23,7 @@ jobs:
         shell: bash
         run: |
             git clone --recursive --depth=1 https://github.com/rstacruz/cheatsheets.git ./
-            # rm *.md
+            rm *.md
             rm -rf fitness wip deprecated
             git clone https://github.com/HansRobo/mycheatsheets.git 
             cp  mycheatsheets/sheets/*.md ./

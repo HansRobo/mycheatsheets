@@ -23,7 +23,7 @@
 <meta charset='utf-8'>
 <meta content='width=device-width, initial-scale=1.0' name='viewport'>
 <link href='./assets/favicon.png' rel='shortcut icon'>
-<meta content='/ros.html' name='app:pageurl'>
+<meta content='/navigation%20stack.html' name='app:pageurl'>
 
 
   <title>ROS cheatsheet</title>
@@ -33,8 +33,8 @@
 
 
 
-  <meta content='https://assets.devhints.io/previews/ros.jpg?t=20200725020937' property='og:image'>
-  <meta content='https://assets.devhints.io/previews/ros.jpg?t=20200725020937' property='twitter:image'>
+  <meta content='https://assets.devhints.io/previews/navigation%20stack.jpg?t=20200725020937' property='og:image'>
+  <meta content='https://assets.devhints.io/previews/navigation%20stack.jpg?t=20200725020937' property='twitter:image'>
   <meta content='900' property='og:image:width'>
   <meta content='471' property='og:image:height'>
 
@@ -45,8 +45,8 @@
   <meta content="One-page guide to ROS: usage, examples, and more. Robot Operating System" property="twitter:description">
 
 
-<link rel="canonical" href="https://devhints.io/ros">
-<meta name="og:url" content="https://devhints.io/ros">
+<link rel="canonical" href="https://devhints.io/navigation%20stack">
+<meta name="og:url" content="https://devhints.io/navigation%20stack">
 
 
 
@@ -119,7 +119,7 @@ gtag('config','UA-106902774-1');
     "@id": "https://google.com/article"
   },
   "headline": "ROS cheatsheet",
-  "image": [ "https://assets.devhints.io/previews/ros.jpg?t=20200725020937" ],
+  "image": [ "https://assets.devhints.io/previews/navigation%20stack.jpg?t=20200725020937" ],
   "description": "One-page guide to ROS: usage, examples, and more. Robot Operating System"
 }
 </script>
@@ -138,7 +138,7 @@ gtag('config','UA-106902774-1');
     "@type": "ListItem",
     "position": 2,
     "item": {
-      "@id": "https://devhints.io/ros",
+      "@id": "https://devhints.io/navigation%20stack",
       "name": "ROS"
     }
   }]
@@ -165,8 +165,8 @@ gtag('config','UA-106902774-1');
       <div class='actions'>
         
 <ul class="social-list social page-actions">
-  <li class="facebook link hint--bottom" data-hint="Share on Facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://devhints.io/ros.html" target="share"><span class="text"></span></a></li>
-  <li class="twitter link hint--bottom" data-hint="Share on Twitter"><a href="https://twitter.com/intent/tweet?text=The%20ultimate%20cheatsheet%20for%20ROS.%20https://devhints.io/ros.html" target="share"><span class="text"></span></a></li>
+  <li class="facebook link hint--bottom" data-hint="Share on Facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://devhints.io/navigation%20stack.html" target="share"><span class="text"></span></a></li>
+  <li class="twitter link hint--bottom" data-hint="Share on Twitter"><a href="https://twitter.com/intent/tweet?text=The%20ultimate%20cheatsheet%20for%20ROS.%20https://devhints.io/navigation%20stack.html" target="share"><span class="text"></span></a></li>
   
 </ul>
 
@@ -174,7 +174,7 @@ gtag('config','UA-106902774-1');
         
           <ul class='page-actions'>
             <li class='link github -button hint--bottom' data-hint='Edit this page on GitHub'>
-              <a href='https://github.com/rstacruz/cheatsheets/blob/master/ros.md'>
+              <a href='https://github.com/rstacruz/cheatsheets/blob/master/navigation stack.md'>
                 <span class='text -visible'>Edit</span>
               </a>
             </li>
@@ -218,48 +218,6 @@ gtag('config','UA-106902774-1');
   <main class='post-content MarkdownBody' data-js-main-body data-js-anchors role='main'>
     <h2 class="-three-column" id="getting-started">Getting started</h2>
 
-<h3 id="rqt">rqt</h3>
-<h4 id="rqt-1">rqt</h4>
-<h4 id="rqt_graph">rqt_graph</h4>
-<h4 id="rqt_plot">rqt_plot</h4>
-<h4 id="rqt_topic">rqt_topic</h4>
-<h4 id="rqt_dep">rqt_dep</h4>
-<h4 id="rqt_bag">rqt_bag</h4>
-<h4 id="rqt_console">rqt_console</h4>
-<h4 id="rqt_image_view">rqt_image_view</h4>
-<h4 id="rqt_shell">rqt_shell</h4>
-<h4 id="rqt_logger_level">rqt_logger_level</h4>
-<h4 id="making-rqt-plugin">making rqt plugin</h4>
-
-<h3 id="rviz">rviz</h3>
-<h4 id="making-rviz-tool-plugin">making rviz tool plugin</h4>
-<h4 id="making-rviz-panel-plugin">making rviz panel plugin</h4>
-
-<h3 id="command">command</h3>
-<h4 id="rosrun">rosrun</h4>
-<h4 id="roslaunch">roslaunch</h4>
-<h4 id="rosbag">rosbag</h4>
-<h4 id="roscore">roscore</h4>
-<h4 id="rosparam">rosparam</h4>
-<h4 id="rostopic">rostopic</h4>
-
-<h3 id="catkin">catkin</h3>
-<h4 id="catkin-command">catkin command</h4>
-
-<!-- | Shortcut     | Description               |
-| ---          | ---                       |
-| `b` _/_ `w`  | Previous/next word        |
-| `ge` _/_ `e` | Previous/next end of word |
-{: .-shortcuts} -->
-
-<h4 id="catkin-cmake">catkin cmake</h4>
-
-<!-- | Shortcut     | Description                        |
-| ---          | ---                                |
-| `0` _(zero)_ | Start of line                      |
-| `^`          | Start of line _(after whitespace)_ |
-| `$`          | End of line                        |
-{: .-shortcuts} -->
 <h3 id="navigation-stack">Navigation Stack</h3>
 
 <h4 id="local-planner">local planner</h4>
@@ -270,11 +228,6 @@ gtag('config','UA-106902774-1');
 
 <h4 id="global-planner">global planner</h4>
 <h3 id="gazebo">gazebo</h3>
-
-<h3 id="choreonoid">choreonoid</h3>
-<h4 id="choreonoid_ros">choreonoid_ros</h4>
-
-<h3 id="ros_control">ros_control</h3>
 
 <h2 id="also-see">Also see</h2>
 
@@ -294,7 +247,7 @@ gtag('config','UA-106902774-1');
       <details class='comments-details'>
         <summary>
           <strong class='count'>
-            <span class='disqus-comment-count' data-disqus-identifier="ros" data-disqus-url='https://devhints.io/ros'>0 Comments</span>
+            <span class='disqus-comment-count' data-disqus-identifier="navigation%20stack" data-disqus-url='https://devhints.io/navigation%20stack'>0 Comments</span>
           </strong>
           <span class='suffix'>for this cheatsheet.</span>
           <span class='fauxlink'>Write yours!</span>
@@ -306,7 +259,7 @@ gtag('config','UA-106902774-1');
         </div>
       </details>
     </div>
-    <noscript data-js-disqus='{"host":"devhints.disqus.com","url":"https://devhints.io/ros","identifier":"ros"}'></noscript>
+    <noscript data-js-disqus='{"host":"devhints.disqus.com","url":"https://devhints.io/navigation%20stack","identifier":"navigation%20stack"}'></noscript>
   </section>
 
 
@@ -383,7 +336,7 @@ gtag('config','UA-106902774-1');
 
             
               <li class='item related-post-item'>
-  <a href='./navigation%20stack'>
+  <a href='./navigation2'>
     <strong>ROS</strong>
     <span>
       cheatsheet
@@ -397,7 +350,7 @@ gtag('config','UA-106902774-1');
 
             
               <li class='item related-post-item'>
-  <a href='./navigation2'>
+  <a href='./ros'>
     <strong>ROS</strong>
     <span>
       cheatsheet
@@ -463,7 +416,7 @@ gtag('config','UA-106902774-1');
 
             
               <li class='item related-post-item'>
-  <a href='./navigation%20stack'>
+  <a href='./navigation2'>
     <strong>ROS</strong>
     <span>
       cheatsheet
@@ -477,7 +430,7 @@ gtag('config','UA-106902774-1');
 
             
               <li class='item related-post-item'>
-  <a href='./navigation2'>
+  <a href='./ros'>
     <strong>ROS</strong>
     <span>
       cheatsheet

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://devhints.io/</loc></url>
-<url><loc>https://devhints.io/catkin</loc></url>
-<url><loc>https://devhints.io/navigation%20stack</loc></url>
-<url><loc>https://devhints.io/navigation2</loc></url>
-<url><loc>https://devhints.io/ros</loc></url>
-<url><loc>https://devhints.io/ros2</loc></url>
-<url><loc>https://devhints.io/rqt</loc></url>
-<url><loc>https://devhints.io/assets/css/style.css</loc></url>
-<url><loc>https://devhints.io/redirects.json</loc></url>
+<url><loc>https://hansrobo.github.io/mycheatsheets/</loc></url>
+<url><loc>https://hansrobo.github.io/mycheatsheets/catkin</loc></url>
+<url><loc>https://hansrobo.github.io/mycheatsheets/navigation%20stack</loc></url>
+<url><loc>https://hansrobo.github.io/mycheatsheets/navigation2</loc></url>
+<url><loc>https://hansrobo.github.io/mycheatsheets/ros</loc></url>
+<url><loc>https://hansrobo.github.io/mycheatsheets/ros2</loc></url>
+<url><loc>https://hansrobo.github.io/mycheatsheets/rqt</loc></url>
+<url><loc>https://hansrobo.github.io/mycheatsheets/assets/css/style.css</loc></url>
+<url><loc>https://hansrobo.github.io/mycheatsheets/redirects.json</loc></url>
 
 </urlset>
 

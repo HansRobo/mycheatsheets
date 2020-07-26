@@ -1,7 +1,7 @@
 [
 {
   "id": "catkin",
-  "title": "ROS",
+  "title": "catkin",
   "url": "/catkin",
   "category": "ROS",
   "keywords": null,
@@ -12,7 +12,7 @@
   "updated": "2020-07-24"
 },{
   "id": "navigation%20stack",
-  "title": "ROS",
+  "title": "navigation stack",
   "url": "/navigation%20stack",
   "category": "ROS",
   "keywords": null,
@@ -23,7 +23,7 @@
   "updated": "2020-07-24"
 },{
   "id": "navigation2",
-  "title": "ROS",
+  "title": "navigation2",
   "url": "/navigation2",
   "category": "ROS",
   "keywords": null,
@@ -34,7 +34,7 @@
   "updated": "2020-07-24"
 },{
   "id": "ros",
-  "title": "ROS",
+  "title": "ros",
   "url": "/ros",
   "category": "ROS",
   "keywords": null,
@@ -45,7 +45,7 @@
   "updated": "2020-07-24"
 },{
   "id": "ros2",
-  "title": "ROS",
+  "title": "ros2",
   "url": "/ros2",
   "category": "ROS",
   "keywords": null,
@@ -56,7 +56,7 @@
   "updated": "2020-07-24"
 },{
   "id": "rqt",
-  "title": "ROS",
+  "title": "rqt",
   "url": "/rqt",
   "category": "ROS",
   "keywords": null,

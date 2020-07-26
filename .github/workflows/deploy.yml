@@ -25,6 +25,7 @@ jobs:
             git clone --recursive --depth=1 https://github.com/rstacruz/cheatsheets.git ./
             git clone https://github.com/HansRobo/mycheatsheets.git 
             cp index.md mycheatsheets/sheets
+            cp package.md mycheatsheets/sheets
             rm *.md
             rm -rf fitness wip deprecated
             cp  mycheatsheets/sheets/*.md ./

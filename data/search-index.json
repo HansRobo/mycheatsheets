@@ -33,6 +33,17 @@
   "tags": ["Featured"],
   "updated": "2020-07-24"
 },{
+  "id": "package",
+  "title": "package.json",
+  "url": "/package",
+  "category": "Hidden",
+  "keywords": null,
+  "content_html": "",
+  "intro_html": "",
+  "description_html": "",
+  "tags": null,
+  "updated": null
+},{
   "id": "ros",
   "title": "ros",
   "url": "/ros",
@@ -82,7 +93,7 @@
   "url": "/redirects.json",
   "category": "Others",
   "keywords": null,
-  "content_html": "<p>{}</p>",
+  "content_html": "<p>{“/package.html”:”https://hansrobo.github.io/mycheatsheets/package.json”}</p>",
   "intro_html": "",
   "description_html": "",
   "tags": null,

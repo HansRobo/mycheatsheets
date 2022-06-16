@@ -10,7 +10,7 @@ intro: colcon
 
 Getting started
 ---------------
-{: .-three-column}
+{: .-two-column}
 
 ### colconのよく使うサブコマンド
 

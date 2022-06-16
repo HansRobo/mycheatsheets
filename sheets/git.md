@@ -13,13 +13,13 @@ Getting started
 
 {: .-three-column}
 
-## gitのsubmoduleの移動方法
+### gitのsubmoduleの移動方法
 
 ```bash
 git mv <from> <to>
 ```
 
-## GitHubにssh鍵を追加する
+### GitHubにssh鍵を追加する
 
 ```bash
 cd ~/.ssh

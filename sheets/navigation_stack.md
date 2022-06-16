@@ -1,5 +1,5 @@
 ---
-title: navigation stack
+title: NavigationStack
 category: ROS
 layout: 2017/sheet
 tags: [Featured]

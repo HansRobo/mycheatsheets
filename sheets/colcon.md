@@ -10,7 +10,7 @@ intro: colcon
 
 Getting started
 ---------------
-{: .-two-column}
+{: .-three-column}
 
 ### colconのよく使うサブコマンド
 
@@ -23,7 +23,7 @@ Getting started
 | `graph` | パッケージ間の依存関係グラフを表示 |
 {: .-shortcuts}
 
-#### colcon buildのよく使うオプション
+### colcon buildのよく使うオプション
 
 | オプション     | 説明                        |
 | ---          | ---                                |

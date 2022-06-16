@@ -1,6 +1,6 @@
 ---
 title: ubuntu
-category: ROS
+category: Ubuntu
 layout: 2017/sheet
 tags: [Featured]
 updated: 2022-06-16

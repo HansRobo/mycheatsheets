@@ -66,7 +66,7 @@ jobs:
 
       - name: Use Ruby
         uses: actions/setup-ruby@v1
-        with: { ruby-version: '2.7.1' }
+        with: { ruby-version: '3.1.2' }
 
       - name: Setup dependencies
         run: |

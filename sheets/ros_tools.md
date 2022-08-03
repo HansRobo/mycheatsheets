@@ -46,7 +46,7 @@ Rviz2の上の部分にデータを表示するRviz2プラグイン
 
 ### dear_ros_node_viewer
 
-DearImGuiライブラリを使ったrqt_graphの軽量版
+DearImGuiライブラリを使ったrqt_graphの軽量版  
 [takeshi-iwanari/dear_ros_node_viewer](https://github.com/takeshi-iwanari/dear_ros_node_viewer)
 
 <video controls autoplay muted>
@@ -57,8 +57,8 @@ DearImGuiライブラリを使ったrqt_graphの軽量版
 
 ### ament_cmake_auto
 
-ROS2のCMakeを楽に書くためのプラグイン
-デフォルトでインストールされている.
+ROS2のCMakeを楽に書くためのプラグイン  
+デフォルトでインストールされている  
 詳細は[ブログ](https://hans-robo.hatenablog.com/entry/2020/12/15/153503)を参照
 
 [amnet_cmake_auto](https://github.com/ament/ament_cmake/tree/rolling/ament_cmake_auto)

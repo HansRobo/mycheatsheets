@@ -8,7 +8,7 @@ weight: -10
 intro: KDE
 ---
 
-Getting started
+
 ---------------
 
 {: .-three-column}

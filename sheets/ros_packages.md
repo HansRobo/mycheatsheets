@@ -8,8 +8,8 @@ weight: -10
 intro: ros_packages
 ---
 
-Getting started
 ---------------
+
 {: .-three-column}
 
 ### ros2_logging_fmt
@@ -28,10 +28,10 @@ logger.debug("DEBUG MESSAGE");
 
 ### grid_map
 
-グリッドマップを扱う強力なライブラリ
+グリッドマップを扱う強力なライブラリ  
 [ANYbotics/grid_map](https://github.com/ANYbotics/grid_map)
 
-ROS2対応はゆっくりなので，TIERIVフォークの方が良い
+ROS2対応はゆっくりなので，TIERIVフォークの方が良い  
 [tier4/grid_map/tree/prepare/humble](https://github.com/tier4/grid_map/tree/prepare/humble)
 
 ### generate_parameter_library

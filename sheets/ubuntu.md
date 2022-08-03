@@ -8,7 +8,6 @@ weight: -10
 intro: Ubuntu
 ---
 
-Getting started
 ---------------
 
 {: .-three-column}

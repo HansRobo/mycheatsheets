@@ -8,7 +8,7 @@ weight: -10
 intro: Bash
 ---
 
-Getting started
+
 ---------------
 
 {: .-three-column}

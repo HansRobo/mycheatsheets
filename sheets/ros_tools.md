@@ -8,8 +8,8 @@ weight: -10
 intro: ros_tools
 ---
 
-Getting started
 ---------------
+
 {: .-three-column}
 
 ### PlotJuggler

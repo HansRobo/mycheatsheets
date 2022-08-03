@@ -8,7 +8,7 @@ weight: -10
 intro: Git
 ---
 
-Getting started
+
 ---------------
 
 {: .-three-column}

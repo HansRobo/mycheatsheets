@@ -26,6 +26,10 @@ jobs:
             git clone https://github.com/HansRobo/mycheatsheets.git 
             cp index.md mycheatsheets/sheets
             cp package.md mycheatsheets/sheets
+            rm assets/favicon.png
+            mv mycheatsheets/assets/favicon.png assets/favicon.png
+            rm assets/style.css
+            mv mycheatsheets/assets/style.css assets/style.css
             rm *.md
             rm -rf fitness wip deprecated
             cp  mycheatsheets/sheets/*.md ./

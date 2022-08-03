@@ -8,6 +8,12 @@ weight: -10
 intro: ros_tools
 ---
 
+<style type="text/css">
+video {
+    width: 100%;
+}
+</style>
+
 ---------------
 
 {: .-three-column}
@@ -25,11 +31,13 @@ sudo apt install ros-$ROS_DISTRO-plotjuggler
 ![PlotJuggler](https://raw.githubusercontent.com/facontidavide/PlotJuggler/main/docs/plotjuggler3.gif)
 
 ### multi_data_monitor
+
 Rviz2の上の部分にデータを表示するRviz2プラグイン
 
 [tier4/multi_data_monitor](https://github.com/tier4/multi_data_monitor)
 
 ### rqt_embed_window
+
 任意のウインドウをrqtで表示するプラグイン
 
 [awesomebytes/rqt_embed_window](https://github.com/awesomebytes/rqt_embed_window)
@@ -48,6 +56,7 @@ DearImGuiライブラリを使ったrqt_graphの軽量版
 ![](https://user-images.githubusercontent.com/105265012/177068238-eaf4fed9-12c0-4c5b-ac7f-9597483c4c3c.mp4)
 
 ### ament_cmake_auto
+
 ROS2のCMakeを楽に書くためのプラグイン
 デフォルトでインストールされている.
 詳細は[ブログ](https://hans-robo.hatenablog.com/entry/2020/12/15/153503)を参照

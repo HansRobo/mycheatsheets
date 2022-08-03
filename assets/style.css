@@ -2,6 +2,17 @@ video {
     width: 100%;
 }
 
+
+.body-area {
+    max-width: 90%;
+    margin: 0 auto;
+    @include gutter(padding);
+
+    &.-slim {
+        max-width: 740px;
+    }
+}
+
 /*
  * pages list
  */

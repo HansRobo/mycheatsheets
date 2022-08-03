@@ -1,5 +1,16 @@
 video {
-    width: 50%;
+    width: 100%;
+}
+
+
+.body-area {
+    max-width: 90%;
+    margin: 0 auto;
+    @include gutter(padding);
+
+    &.-slim {
+        max-width: 740px;
+    }
 }
 
 /*
@@ -8,7 +19,7 @@ video {
 
 .pages-list {
     font-size: 0.9em;
-    max-width: 1600px;
+    max-width: 800px;
     margin: 60px auto;
     overflow: hidden;
 }

@@ -22,6 +22,17 @@
   "tags": ["Featured"],
   "updated": "2022-06-16"
 },{
+  "id": "cpp",
+  "title": "C++",
+  "url": "/cpp",
+  "category": "C++",
+  "keywords": null,
+  "content_html": "<hr />\n\n<h3 class=\"-three-column\" id=\"範囲for文range-based-forでインデックスを使いたい\">範囲for文(range-based for)でインデックスを使いたい</h3>\n\n<p><code>boost::adaptors::indexed</code>を使う</p>\n<pre><code class=\"language-c++\">#include &lt;boost/range/adaptor/indexed.hpp&gt;\nfor (const auto &amp; e : elements | boost::adaptors::indexed()) {\n    std::cout &lt;&lt; e.index() &lt;&lt; \":\" &lt;&lt; e.value() &lt;&lt; std::endl;\n}\n</code></pre>\n\n<p><a href=\"https://github.com/ericniebler/range-v3\">range-v3</a>ライブラリを使う</p>\n<pre><code class=\"language-c++\">#include &lt;range/v3/view/enumerate.hpp&gt;\nfor (const auto &amp; [index, value] : elements | ranges::views::enumerate) {\n    std::cout &lt;&lt; index &lt;&lt; \":\" &lt;&lt; value &lt;&lt; std::endl;\n}\n</code></pre>\n\n<p>C++20以降で書ける方法</p>\n<pre><code class=\"language-cpp\">for (size_t index = 0; const auto &amp; e: elemnets) {\n    std::cout &lt;&lt; index &lt;&lt; \":\" &lt;&lt; value &lt;&lt; std::endl;\n    ++index;\n}\n</code></pre>\n<h3 id=\"範囲for文の型の使い方\">範囲for文の型の使い方</h3>\n<p>基本的にはユニバーサル参照 <code>auto &amp;&amp;</code> を使う</p>\n<pre><code class=\"language-cpp\">for(auto &amp;&amp; e : elements){}\n</code></pre>\n\n<p>配列に操作を加えない時はconst参照 <code>const auto  &amp;</code> を使う</p>\n<pre><code class=\"language-cpp\">for(const auto &amp; e : elements){}\n</code></pre>",
+  "intro_html": "<p>C++</p>",
+  "description_html": "",
+  "tags": ["Featured"],
+  "updated": "2022-06-16"
+},{
   "id": "git",
   "title": "Git",
   "url": "/git",

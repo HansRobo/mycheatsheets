@@ -35,8 +35,8 @@
 
 
 
-  <meta content='https://assets.devhints.io/previews/media_operation.jpg?t=20220806050351' property='og:image'>
-  <meta content='https://assets.devhints.io/previews/media_operation.jpg?t=20220806050351' property='twitter:image'>
+  <meta content='https://assets.devhints.io/previews/media_operation.jpg?t=20220806050809' property='og:image'>
+  <meta content='https://assets.devhints.io/previews/media_operation.jpg?t=20220806050809' property='twitter:image'>
   <meta content='900' property='og:image:width'>
   <meta content='471' property='og:image:height'>
 
@@ -105,11 +105,11 @@ gtag('config','UA-106902774-1');
 <!-- deferred css -->
 <script id='deferred-css'>;(function(links){(requestAnimationFrame||mozRequestAnimationFrame||webkitRequestAnimationFrame||msRequestAnimationFrame||(function(fn){window.addEventListener('load',fn)}))(function(){var h=document.getElementsByTagName('head')[0],l,i;for (i=0;i<links.length;i++){l=document.createElement('link');l.rel='stylesheet';l.href=links[i];h.appendChild(l);}})})([
 'https://fonts.googleapis.com/css?family=Cousine',
-'./assets/2017/style.css?t=20220806050351'
+'./assets/2017/style.css?t=20220806050809'
 ])</script>
 <noscript id='deferred-css-fallback'>
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Cousine'>
-<link rel='stylesheet' href='./assets/2017/style.css?t=20220806050351'>
+<link rel='stylesheet' href='./assets/2017/style.css?t=20220806050809'>
 </noscript>
 
     <script type='application/ld+json'>
@@ -121,7 +121,7 @@ gtag('config','UA-106902774-1');
     "@id": "https://google.com/article"
   },
   "headline": "Media Operations cheatsheet",
-  "image": [ "https://assets.devhints.io/previews/media_operation.jpg?t=20220806050351" ],
+  "image": [ "https://assets.devhints.io/previews/media_operation.jpg?t=20220806050809" ],
   "description": "One-page guide to Media Operations: usage, examples, and more. Media Operations"
 }
 </script>
@@ -270,49 +270,55 @@ convert input.png output.pdf
 convert input.png output.jpg
 </code></pre>
 
-<p>以下のような有名フォーマットには軒並み対応している</p>
-<ul>
-  <li>bmp</li>
-  <li>eps</li>
-  <li>gif</li>
-  <li>jpeg</li>
-  <li>mat</li>
-  <li>pdf</li>
-  <li>pgm</li>
-  <li>png</li>
-  <li>svg</li>
-  <li>webp</li>
-</ul>
+<details>
+  <summary>
+    <p>以下のような有名フォーマットには軒並み対応している&lt;/summary&gt;</p>
 
-<h3 id="音声変換">音声変換</h3>
+    <ul>
+      <li>bmp</li>
+      <li>eps</li>
+      <li>gif</li>
+      <li>jpeg</li>
+      <li>mat</li>
+      <li>pdf</li>
+      <li>pgm</li>
+      <li>png</li>
+      <li>svg</li>
+      <li>webp</li>
+    </ul>
+    <p>&lt;/details&gt;</p>
 
-<pre><code class="language-bash">ffmpeg -i input.wav output.mp3
+    <h3 id="section">音声変換</h3>
+
+    <pre><code class="language-bash">ffmpeg -i input.wav output.mp3
 </code></pre>
 
-<p>よく使うオプション</p>
+    <p>よく使うオプション</p>
 
-<table class="-shortcuts">
-  <thead>
-    <tr>
-      <th>オプション</th>
-      <th>説明</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>-ar &lt;rate&gt;</code></td>
-      <td>サンプリングレートを指定（省略で入力ファイルと同じに）</td>
-    </tr>
-    <tr>
-      <td><code>-f &lt;format&gt;</code></td>
-      <td>出力フォーマットを指定</td>
-    </tr>
-    <tr>
-      <td><code>-vn</code></td>
-      <td>動画ファイルの場合，音声部分のみ取り出す</td>
-    </tr>
-  </tbody>
-</table>
+    <table class="-shortcuts">
+      <thead>
+        <tr>
+          <th>オプション</th>
+          <th>説明</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>-ar &lt;rate&gt;</code></td>
+          <td>サンプリングレートを指定（省略で入力ファイルと同じに）</td>
+        </tr>
+        <tr>
+          <td><code>-f &lt;format&gt;</code></td>
+          <td>出力フォーマットを指定</td>
+        </tr>
+        <tr>
+          <td><code>-vn</code></td>
+          <td>動画ファイルの場合，音声部分のみ取り出す</td>
+        </tr>
+      </tbody>
+    </table>
+  </summary>
+</details>
 
         </main>
     </div>
@@ -586,7 +592,7 @@ function n(n,t,e){n.addEventListener?n.addEventListener(t,e):n.attachEvent("on"+
 },{}],"eoMl":[function(require,module,exports) {
 "use strict";var e=u(require("./wrapify")),d=u(require("dom101/add-class")),t=u(require("dom101/on"));function u(e){return e&&e.__esModule?e:{default:e}}var a,o=document.querySelector("[data-js-main-body]");function r(){a||((0,d.default)(document.documentElement,"LoadDone"),a=!0)}o&&((0,e.default)(o),(0,d.default)(o,"-wrapified")),(0,t.default)(window,"load",r),setTimeout(r,5e3);
 },{"./wrapify":"hE9p","dom101/add-class":"G20n","dom101/on":"DJ2P"}]},{},["eoMl"], null)</script>
-<script src='./assets/packed/app.js?t=20220806050351'></script>
+<script src='./assets/packed/app.js?t=20220806050809'></script>
 
 
 

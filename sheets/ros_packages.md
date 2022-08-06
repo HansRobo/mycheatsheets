@@ -17,6 +17,7 @@ intro: ros_packages
 [facontidavide/ros2_logging_fmt](https://github.com/facontidavide/ros2_logging_fmt)
 
 fmtlibを使ってログを出力する軽量かつシンプルなロギングツール
+
 ```c++
 ros2_logging_fmt::Logger logger(node.get_logger());
 

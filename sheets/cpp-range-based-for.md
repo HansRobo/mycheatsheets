@@ -1,11 +1,11 @@
 ---
-title: C++
+title: 範囲for文
 category: C++
 layout: 2017/sheet
 tags: [Featured]
 updated: 2022-06-16
 weight: -10
-intro: C++
+intro: 範囲for文の使い方
 ---
 
 {: .-three-column}

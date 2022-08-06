@@ -58,7 +58,11 @@ sudo apt install imagemagick
 convert input.png output.jpg
 ```
 
-以下のような有名フォーマットには軒並み対応している
+
+
+<details>
+<summary>以下のような有名フォーマットには軒並み対応している</summary>
+
 - bmp
 - eps
 - gif
@@ -69,6 +73,7 @@ convert input.png output.jpg
 - png
 - svg
 - webp
+</details>
 
 ### 音声変換
 

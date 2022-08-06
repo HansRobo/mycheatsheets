@@ -66,6 +66,17 @@
   "tags": ["Featured"],
   "updated": "2022-06-16"
 },{
+  "id": "media_operation",
+  "title": "Media Operations",
+  "url": "/media_operation",
+  "category": "Ubuntu",
+  "keywords": null,
+  "content_html": "<hr />\n\n<h3 class=\"-three-column\" id=\"動画をgifへ変換する\">動画をgifへ変換する</h3>\n\n<p>共有ライブラリへの依存関係を表示する</p>\n\n<pre><code class=\"language-bash\">ffmpeg -i input.mp4 output.gif\n</code></pre>\n\n<p class=\"-shortcuts\">よく使うオプション\n| オプション     | 説明               |\n| —          | —                       |\n| <code>-r &lt;rate&gt;</code>  | フレームレートを指定        |\n| <code>-vf scale=&lt;width&gt;:-1</code> | 横幅を指定してリサイズ（固定比） |\n| <code>-ss</code> | 開始秒数を指定 |\n| <code>-t</code> | 動画秒数を指定 |</p>\n\n<h3 id=\"画像をpdfファイルにする\">画像をpdfファイルにする</h3>\n\n<p>論文とかで使うかも？</p>\n\n<pre><code class=\"language-bash\">sudo apt install imagemagick\nconvert input.png output.pdf\n</code></pre>\n\n<p>エラーが出る場合，<code>/etc/ImageMagick-6/policy.xml</code>を編集する．</p>\n<pre><code class=\"language-xml\">&lt;policy domain=\"coder\" rights=\"none\" pattern=\"PDF\" /&gt;\n</code></pre>\n<p>を</p>\n<pre><code class=\"language-xml\">&lt;policy domain=\"coder\" rights=\"read|write\" pattern=\"PDF\" /&gt;\n</code></pre>\n<p>に書き換える</p>\n\n<h3 id=\"画像の種類変換\">画像の種類変換</h3>\n<pre><code class=\"language-bash\">sudo apt install imagemagick\nconvert input.png output.jpg\n</code></pre>\n\n<p>以下のような有名フォーマットには軒並み対応している</p>\n<ul>\n  <li>bmp</li>\n  <li>eps</li>\n  <li>gif</li>\n  <li>jpeg</li>\n  <li>mat</li>\n  <li>pdf</li>\n  <li>pgm</li>\n  <li>png</li>\n  <li>svg</li>\n  <li>webp</li>\n</ul>\n\n<h3 id=\"音声変換\">音声変換</h3>\n\n<pre><code class=\"language-bash\">ffmpeg -i input.wav output.mp3\n</code></pre>\n\n<p class=\"-shortcuts\">よく使うオプション\n| オプション     | 説明               |\n| —          | —                       |\n| <code>-ar &lt;rate&gt;</code>  | サンプリングレートを指定（省略すると入力ファイルと同じになる）        |\n| <code>-f &lt;format&gt;</code> | 出力フォーマットを指定 |\n| <code>-vn</code> | 動画ファイルの場合，音声部分のみ取り出す |</p>",
+  "intro_html": "<p>Media Operations</p>",
+  "description_html": "",
+  "tags": ["Featured"],
+  "updated": "2022-06-16"
+},{
   "id": "package",
   "title": "package.json",
   "url": "/package",

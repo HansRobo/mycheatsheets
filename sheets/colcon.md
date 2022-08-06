@@ -35,5 +35,4 @@ intro: colcon
 | `--cmake-clean-first` | クリーンビルドする |
 {: .-shortcuts}
 
-Also see
 

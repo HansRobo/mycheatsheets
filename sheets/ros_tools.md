@@ -14,7 +14,6 @@ video {
 }
 </style>
 
----------------
 
 {: .-three-column}
 

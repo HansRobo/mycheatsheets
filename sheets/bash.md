@@ -8,9 +8,6 @@ weight: -10
 intro: Bash
 ---
 
-
----------------
-
 {: .-three-column}
 
 ### Bashでの文字エスケープ

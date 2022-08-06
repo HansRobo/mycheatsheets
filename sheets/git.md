@@ -8,9 +8,6 @@ weight: -10
 intro: Git
 ---
 
-
----------------
-
 {: .-three-column}
 
 ### gitのsubmoduleの移動方法

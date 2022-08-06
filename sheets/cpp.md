@@ -8,8 +8,6 @@ weight: -10
 intro: C++
 ---
 
----------------
-
 {: .-three-column}
 
 ### 範囲for文(range-based for)でインデックスを使いたい

@@ -8,8 +8,6 @@ weight: -10
 intro: ros_packages
 ---
 
----------------
-
 {: .-three-column}
 
 ### ros2_logging_fmt

@@ -57,10 +57,8 @@ convert input.png output.jpg
 ```
 
 
-
-<details>
-<summary>以下のような有名フォーマットには軒並み対応している</summary>
-
+以下のような有名フォーマットには軒並み対応している
+<p>
 - bmp
 - eps
 - gif
@@ -71,7 +69,7 @@ convert input.png output.jpg
 - png
 - svg
 - webp
-</details>
+</p>
 
 ### 音声変換
 

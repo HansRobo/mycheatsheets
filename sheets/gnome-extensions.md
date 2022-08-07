@@ -38,7 +38,7 @@ intro: GNOME Extensions
 
 ### CPUFreq
 
-[extensions.gnome.org](https://extensions.gnome.org/extension/1082/cpufreq/)
+[extensions.gnome.org](https://extensions.gnome.org/extension/1082/cpufreq/)  
 Ubuntu22.04では動かないかも
 
 ![panel](https://extensions.gnome.org/extension-data/screenshots/screenshot_1082_8G7gjUt.png)

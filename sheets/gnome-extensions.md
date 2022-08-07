@@ -34,7 +34,7 @@ https://extensions.gnome.org/extension/1125/github-notifications/
 
 ![task-bar](https://extensions.gnome.org/extension-data/screenshots/screenshot_1125_WJMldKq.png)
 
-![setting](assets/images/github-notifications-settings.png)
+![setting](https://raw.githubusercontent.com/HansRobo/mycheatsheets/master/assets/images/github-notifications-settings.png)
 
 ### CPUFreq
 

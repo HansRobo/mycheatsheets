@@ -22,6 +22,17 @@
   "tags": ["Featured"],
   "updated": "2022-06-16"
 },{
+  "id": "cpp-build-time-reduction",
+  "title": "C++ ビルド時間 短縮",
+  "url": "/cpp-build-time-reduction",
+  "category": "C++",
+  "keywords": null,
+  "content_html": "<h3 id=\"並列ビルド\">並列ビルド</h3>\n\n<p><code>make</code> なら<code>-j&lt;N&gt;</code>オプションをつけるとNスレッドでビルドしてくれる<br />\n直接<code>make</code>をたたけない場合でも<code>export MAKEFLAGS=\"-j&lt;N&gt;\"</code>で環境変数に設定することでバックエンドの<code>make</code>に指示できる<br />\n<code>ninja</code>の場合は<code>export NINJAJOBS=&lt;N&gt;</code>で指示できる</p>\n\n<h3 id=\"バックエンドをninjaにする\">バックエンドを<code>ninja</code>にする</h3>\n\n<p><code>make</code>よりかなり早いらしい</p>\n\n<p><code>cmake</code>なら<code>-G ninja</code>オプションをつけるとバックエンドを<code>ninja</code>にすることができる</p>\n\n<h3 id=\"リンカにmoldを使う\">リンカにmoldを使う</h3>\n\n<p>結構早いらしい</p>\n\n<h3 id=\"ccacheを使う\">ccacheを使う</h3>\n\n<p>2回目以降をキャッシュを有効活用して爆速にしてくれる</p>\n\n<h3 id=\"ヘッダー記述量を減らす\">ヘッダー記述量を減らす</h3>\n\n<p>ヘッダはインクルードしているソースファイル全てに展開されるため，実装をソースファイルに移動するだけでかなりのビルド時間削減が期待できる<br />\npimplイディオムなども使える</p>\n\n<h3 id=\"インクルードを減らす\">インクルードを減らす</h3>\n\n<p>「インクルードする=ビルドするソースコード量の増大」なので避けたい<br />\n具体的なクラスの実装が必要ない場合はインクルードせずに前方宣言だけで済ませたり出来る</p>",
+  "intro_html": "<p>C++ ビルド時間 短縮</p>",
+  "description_html": "",
+  "tags": ["Featured"],
+  "updated": "2022-08-19"
+},{
   "id": "cpp-idioms",
   "title": "C++ Idioms",
   "url": "/cpp-idioms",

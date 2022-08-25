@@ -44,6 +44,17 @@
   "tags": ["Featured"],
   "updated": "2022-06-16"
 },{
+  "id": "cpp-reference-diary",
+  "title": "cppreference.com 日記",
+  "url": "/cpp-reference-diary",
+  "category": "C++",
+  "keywords": null,
+  "content_html": "<h3 id=\"関数tryブロック\"><a href=\"https://ja.cppreference.com/w/cpp/language/function-try-block\">関数Tryブロック</a></h3>\n\n<p>以下のようなコードがかけちゃうらしい．<br />\nマジか，tryそんなとこに書けたんか</p>\n\n<pre><code class=\"language-cpp\">int main() try {}\ncatch (...){}\n</code></pre>",
+  "intro_html": "<p>cppreference.com日記</p>",
+  "description_html": "",
+  "tags": ["Featured"],
+  "updated": "2022-06-16"
+},{
   "id": "debug_tools",
   "title": "Debug Tools",
   "url": "/debug_tools",

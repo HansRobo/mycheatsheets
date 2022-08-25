@@ -1,5 +1,8 @@
 home:
   title: "HansRobo's cheatsheets"
+  google_analytics:
+    enable: true
+    id: G-P5846VEQ4L
 
 top_nav:
   title: HansRobo.github.io
@@ -8,9 +11,12 @@ top_nav:
 
 sheet:
   suffix: mycheatsheet
+  google_analytics:
+    enable: true
+    id: G-P5846VEQ4L
 
 social_list:
-  default_description: "Ridiculous collection of web development cheatsheets"
+  default_description: "cheatsheets by HansRobo"
   description: "The ultimate cheatsheet for TITLE."
   facebook_share: Share on Facebook
   twitter_share: Share on Twitter

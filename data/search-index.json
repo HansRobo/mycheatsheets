@@ -49,7 +49,7 @@
   "url": "/cpp-reference-diary",
   "category": "C++",
   "keywords": null,
-  "content_html": "<h3 id=\"関数tryブロック\"><a href=\"https://ja.cppreference.com/w/cpp/language/function-try-block\">関数Tryブロック</a></h3>\n\n<p>以下のようなコードがかけちゃうらしい．<br />\nマジか，tryそんなとこに書けたんか</p>\n\n<pre><code class=\"language-cpp\">int main() try {}\ncatch (...){}\n</code></pre>",
+  "content_html": "<h3 id=\"関数tryブロック\"><a href=\"https://ja.cppreference.com/w/cpp/language/function-try-block\">関数Tryブロック</a></h3>\n\n<p>以下のようなコードがかけちゃうらしい．<br />\nマジか，tryそんなとこに書けたんか</p>\n\n<pre><code class=\"language-cpp\">int main() try {}\ncatch (...){}\n</code></pre>\n\n<h3 id=\"main関数\"><a href=\"https://ja.cppreference.com/w/cpp/language/main_function\">main関数</a></h3>\n\n<p>いわゆるエントリポイント，<code>main</code>関数</p>\n\n<ul>\n  <li><code>main</code>関数は<code>int</code>型だが，return文はなくてもOK</li>\n  <li><code>auto main()</code>という書き方はダメらしい</li>\n  <li><code>return N</code>は<code>std::exit(N)</code>と同じ意味を持つ</li>\n  <li><code>main</code>関数が関数<code>try</code>ブロックになっていてもmain関数の外で定義された（しかし，<code>main</code>関数の終了と同時に破棄される）静的オブジェクトのデストラクタで投げられた例外はキャッチできない</li>\n</ul>",
   "intro_html": "<p>cppreference.com日記</p>",
   "description_html": "",
   "tags": ["Featured"],

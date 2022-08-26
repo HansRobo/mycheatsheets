@@ -23,9 +23,9 @@ catch (...){}
 
 ### [main関数](https://ja.cppreference.com/w/cpp/language/main_function)
 
-いわゆるエントリポイント，main関数
+いわゆるエントリポイント，`main`関数
 
-- main 関数は`int 型だが，return文はなくてもOK
+- `main`関数は`int`型だが，return文はなくてもOK
 - `auto main()`という書き方はダメらしい
 - `return N`は`std::exit(N)`と同じ意味を持つ
-- main関数が関数tryブロックになっていてもmain関数の外で定義された（しかし，main関数の終了と同時に破棄される）静的オブジェクトのデストラクタで投げられた例外はキャッチできない
+- `main`関数が関数`try`ブロックになっていてもmain関数の外で定義された（しかし，`main`関数の終了と同時に破棄される）静的オブジェクトのデストラクタで投げられた例外はキャッチできない

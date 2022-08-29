@@ -35,8 +35,8 @@
 
 
 
-  <meta content='https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20220829153044' property='og:image'>
-  <meta content='https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20220829153044' property='twitter:image'>
+  <meta content='https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20220829153849' property='og:image'>
+  <meta content='https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20220829153849' property='twitter:image'>
   <meta content='900' property='og:image:width'>
   <meta content='471' property='og:image:height'>
 
@@ -105,11 +105,11 @@ gtag('config','UA-106902774-1');
 <!-- deferred css -->
 <script id='deferred-css'>;(function(links){(requestAnimationFrame||mozRequestAnimationFrame||webkitRequestAnimationFrame||msRequestAnimationFrame||(function(fn){window.addEventListener('load',fn)}))(function(){var h=document.getElementsByTagName('head')[0],l,i;for (i=0;i<links.length;i++){l=document.createElement('link');l.rel='stylesheet';l.href=links[i];h.appendChild(l);}})})([
 'https://fonts.googleapis.com/css?family=Cousine',
-'./assets/2017/style.css?t=20220829153044'
+'./assets/2017/style.css?t=20220829153849'
 ])</script>
 <noscript id='deferred-css-fallback'>
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Cousine'>
-<link rel='stylesheet' href='./assets/2017/style.css?t=20220829153044'>
+<link rel='stylesheet' href='./assets/2017/style.css?t=20220829153849'>
 </noscript>
 
     <script type='application/ld+json'>
@@ -121,7 +121,7 @@ gtag('config','UA-106902774-1');
     "@id": "https://google.com/article"
   },
   "headline": "cppreference.com 日記 cheatsheet",
-  "image": [ "https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20220829153044" ],
+  "image": [ "https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20220829153849" ],
   "description": "One-page guide to cppreference.com 日記: usage, examples, and more. cppreference.com日記"
 }
 </script>
@@ -290,6 +290,19 @@ catch (...){}
 <pre><code class="language-cpp">std::for_each(std::execution::par, a.begin(), b.end(), [&amp;](int x) {
     std::cout &lt;&lt; x &lt;&lt; std::endl;
 });
+</code></pre>
+
+<h3 id="stdminmax_element"><a href="https://ja.cppreference.com/w/cpp/algorithm/minmax_element">std::minmax_element</a></h3>
+
+<ul>
+  <li>コンテナの範囲を渡すと，最大値と最小値をペアにして返してくれる</li>
+  <li>例によって二項比較関数は<code>&lt;</code>演算子相当のものを定義して渡せば良い</li>
+  <li>C++17からは実行ポリシーも指定可能</li>
+  <li><code>std::make_pair(std::min_element(), std::max_element())</code>よりも効率が良い</li>
+  <li>一番大きい/小さい要素が複数ある場合，↑は最初の要素を返し，本アルゴリズムは最後の要素を返す</li>
+</ul>
+
+<pre><code class="language-cpp">const auto [min, max] = std::minmax_element(begin(v), end(v));
 </code></pre>
 
         </main>
@@ -536,7 +549,7 @@ function n(n,t,e){n.addEventListener?n.addEventListener(t,e):n.attachEvent("on"+
 },{}],"eoMl":[function(require,module,exports) {
 "use strict";var e=u(require("./wrapify")),d=u(require("dom101/add-class")),t=u(require("dom101/on"));function u(e){return e&&e.__esModule?e:{default:e}}var a,o=document.querySelector("[data-js-main-body]");function r(){a||((0,d.default)(document.documentElement,"LoadDone"),a=!0)}o&&((0,e.default)(o),(0,d.default)(o,"-wrapified")),(0,t.default)(window,"load",r),setTimeout(r,5e3);
 },{"./wrapify":"hE9p","dom101/add-class":"G20n","dom101/on":"DJ2P"}]},{},["eoMl"], null)</script>
-<script src='./assets/packed/app.js?t=20220829153044'></script>
+<script src='./assets/packed/app.js?t=20220829153849'></script>
 
 
 

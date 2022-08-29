@@ -65,3 +65,15 @@ std::for_each(std::execution::par, a.begin(), b.end(), [&](int x) {
     std::cout << x << std::endl;
 });
 ```
+
+### [std::minmax_element](https://ja.cppreference.com/w/cpp/algorithm/minmax_element)
+
+- コンテナの範囲を渡すと，最大値と最小値をペアにして返してくれる
+- 例によって二項比較関数は`<`演算子相当のものを定義して渡せば良い
+- C++17からは実行ポリシーも指定可能
+- `std::make_pair(std::min_element(), std::max_element())`よりも効率が良い
+- 一番大きい/小さい要素が複数ある場合，↑は最初の要素を返し，本アルゴリズムは最後の要素を返す
+
+```cpp
+const auto [min, max] = std::minmax_element(begin(v), end(v));
+```

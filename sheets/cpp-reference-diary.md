@@ -77,3 +77,19 @@ std::for_each(std::execution::par, a.begin(), b.end(), [&](int x) {
 ```cpp
 const auto [min, max] = std::minmax_element(begin(v), end(v));
 ```
+
+### [std::enable_shared_from_this](https://ja.cppreference.com/w/cpp/memory/enable_shared_from_this)
+
+クラス内で`this`を`shared_ptr`にしたい場合が往々にしてある．（全て自分のコードの場合では設計が悪い場合が多いが，外部ライブラリを使用しているとそうするしか無い場合もありがち）
+そういう時に，`std::shared_ptr<T>(this)`などとやってしまうと，`this`は2回以上破棄されてしまいやすい．
+
+そんな時に使うのが，これ`std::enable_shared_from_this`. 使い方は`shared_ptr`化したいクラスで`std::enable_shared_from_this`をpublic継承し，`shared_from_this()`を呼ぶだけ．
+しかし，**本機能を使っているクラスは必ずshared_ptrで管理されている必要がある**ので注意が必要．そうでない場合の動作は未定義．
+
+```cpp
+class A : public std::enable_shared_from_this {
+A(){
+  auto shared_ptr_this = shared_from_this();
+}
+};
+```

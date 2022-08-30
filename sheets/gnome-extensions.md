@@ -1,6 +1,6 @@
 ---
 title: GNOME Extensions
-category: Ubuntu
+category: Ubuntu, Tools
 layout: 2017/sheet
 tags: [Featured]
 updated: 2022-08-07

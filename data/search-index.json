@@ -80,7 +80,7 @@
   "id": "gnome-extensions",
   "title": "GNOME Extensions",
   "url": "/gnome-extensions",
-  "category": "Ubuntu",
+  "category": "Ubuntu, Tools",
   "keywords": null,
   "content_html": "<h3 id=\"workspace-matrix\">Workspace Matrix</h3>\n\n<p><a href=\"https://extensions.gnome.org/extension/1485/workspace-matrix/\">extensions.gnome.org</a></p>\n\n<p><img src=\"https://extensions.gnome.org/extension-data/screenshots/screenshot_1485.png\" alt=\"screenshot\" /></p>\n\n<h3 id=\"wintile\">WinTile</h3>\n\n<p><a href=\"https://extensions.gnome.org/extension/1723/wintile-windows-10-window-tiling-for-gnome/\">extensions.gnome.org</a></p>\n\n<p><img src=\"https://extensions.gnome.org/extension-data/screenshots/screenshot_1723.png\" alt=\"screenshot\" /></p>\n\n<h3 id=\"gtile\">gTile</h3>\n\n<p><a href=\"https://extensions.gnome.org/extension/28/gtile/\">extensions.gnome.org</a></p>\n\n<p><img src=\"https://extensions.gnome.org/extension-data/screenshots/screenshot_28.png\" alt=\"screenshot\" /></p>\n\n<h3 id=\"github-notifications\">GitHub Notifications</h3>\n\n<p><a href=\"https://extensions.gnome.org/extension/1125/github-notifications/\">extensions.gnome.org</a></p>\n\n<p><img src=\"https://extensions.gnome.org/extension-data/screenshots/screenshot_1125_WJMldKq.png\" alt=\"task-bar\" /></p>\n\n<p><img src=\"https://raw.githubusercontent.com/HansRobo/mycheatsheets/master/assets/images/github-notifications-settings.png\" alt=\"setting\" /></p>\n\n<h3 id=\"cpufreq\">CPUFreq</h3>\n\n<p><a href=\"https://extensions.gnome.org/extension/1082/cpufreq/\">extensions.gnome.org</a><br />\nUbuntu22.04では動かないかも</p>\n\n<p><img src=\"https://extensions.gnome.org/extension-data/screenshots/screenshot_1082_8G7gjUt.png\" alt=\"panel\" /></p>\n\n<h3 id=\"spotify-tray\">Spotify-Tray</h3>\n\n<p><a href=\"https://extensions.gnome.org/extension/4472/spotify-tray/\">extensions.gnome.org</a></p>\n\n<p><img src=\"https://extensions.gnome.org/extension-data/screenshots/screenshot_4472.png\" alt=\"screenshot\" /></p>",
   "intro_html": "<p>GNOME Extensions</p>",
@@ -164,6 +164,17 @@
   "description_html": "",
   "tags": ["Featured"],
   "updated": "2022-06-16"
+},{
+  "id": "vscode-extensions",
+  "title": "VSCode 拡張機能",
+  "url": "/vscode-extensions",
+  "category": "Tools",
+  "keywords": null,
+  "content_html": "<h3 id=\"errorlens\"><a href=\"https://marketplace.visualstudio.com/items?itemName=PhilHindle.errorlens\">ErrorLens</a></h3>\n\n<p>出てきたエラーをその行に表示してくれる．エラーなら赤，警告なら黄色に着色してくれるのでこれで警告を放っておくことも減りそう</p>\n\n<p><img src=\"https://github.com/phindle/error-lens/raw/master/images/Screenshot-1.png\" alt=\"\" /></p>\n\n<h3 id=\"docker\">Docker</h3>\n\n<p>TBD</p>\n\n<h3 id=\"テキスト校正くん\">テキスト校正くん</h3>\n\n<p>TBD</p>\n\n<h3 id=\"3d-viewer-for-vscode\">3D Viewer for VSCode</h3>\n\n<p>TBD</p>\n\n<h3 id=\"brancket-lens\">Brancket Lens</h3>\n\n<p>TBD</p>",
+  "intro_html": "<p>VSCode 拡張機能</p>",
+  "description_html": "",
+  "tags": ["Featured"],
+  "updated": "2022-08-30"
 },{
   "id": "assets/css/style.css",
   "title": null,

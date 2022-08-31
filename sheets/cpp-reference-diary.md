@@ -93,3 +93,33 @@ A(){
 }
 };
 ```
+
+### [std::future](https://ja.cppreference.com/w/cpp/thread/future)
+
+非同期処理を行うためのクラス．このクラスでは今は無いが，「未来」に手に入るであろうデータを取り扱う．
+データが手に入ったかどうかは，`valid`関数で調べることができ，`get`関数で取り出せる．
+また，手に入るまで待機する`wait`関数も何種類か用意されている．
+
+| 関数名       | 説明                |
+|---------------|-------------------|
+| `wait`       | 処理完了まで待つ             |
+| `wait_for(<duration>)`        | 処理完了まで待つ（指定時間でタイムアウト）            |
+| `wait_until(<time_point>)` | 処理完了まで待つ（指定時間になったらタイムアウト）          |
+{: .-shortcuts}
+
+
+### [std::promise](https://cpprefjp.github.io/reference/future/promise.html)
+
+`std::future`に出来上がったデータを受け渡す役割を持ったクラス．
+使い方は以下のような感じ．
+```cpp
+std::promise<int> p;
+std::future<int> f = p.get_future();
+
+p.set_value(1);
+
+std::cout << f.get() << std::endl;
+```
+
+`std::primise`は，データを渡す相手に「今はまだ空だけど，将来ここにデータを送るからね」と言って`std::future`を渡す．
+後日，データを見つけたstd::promise`は`set_value`関数でデータを送り，`std::future`側では`get`関数で受けとれる．

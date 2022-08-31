@@ -35,8 +35,8 @@
 
 
 
-  <meta content='https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20220831170334' property='og:image'>
-  <meta content='https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20220831170334' property='twitter:image'>
+  <meta content='https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20220831170640' property='og:image'>
+  <meta content='https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20220831170640' property='twitter:image'>
   <meta content='900' property='og:image:width'>
   <meta content='471' property='og:image:height'>
 
@@ -105,11 +105,11 @@ gtag('config','UA-106902774-1');
 <!-- deferred css -->
 <script id='deferred-css'>;(function(links){(requestAnimationFrame||mozRequestAnimationFrame||webkitRequestAnimationFrame||msRequestAnimationFrame||(function(fn){window.addEventListener('load',fn)}))(function(){var h=document.getElementsByTagName('head')[0],l,i;for (i=0;i<links.length;i++){l=document.createElement('link');l.rel='stylesheet';l.href=links[i];h.appendChild(l);}})})([
 'https://fonts.googleapis.com/css?family=Cousine',
-'./assets/2017/style.css?t=20220831170334'
+'./assets/2017/style.css?t=20220831170640'
 ])</script>
 <noscript id='deferred-css-fallback'>
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Cousine'>
-<link rel='stylesheet' href='./assets/2017/style.css?t=20220831170334'>
+<link rel='stylesheet' href='./assets/2017/style.css?t=20220831170640'>
 </noscript>
 
     <script type='application/ld+json'>
@@ -121,7 +121,7 @@ gtag('config','UA-106902774-1');
     "@id": "https://google.com/article"
   },
   "headline": "cppreference.com 日記 cheatsheet",
-  "image": [ "https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20220831170334" ],
+  "image": [ "https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20220831170640" ],
   "description": "One-page guide to cppreference.com 日記: usage, examples, and more. cppreference.com日記"
 }
 </script>
@@ -322,8 +322,8 @@ A(){
 
 <h3 id="stdfuture"><a href="https://ja.cppreference.com/w/cpp/thread/future">std::future</a></h3>
 
-<p>非同期処理を行うためのクラス．このクラスでは今は無いが，「未来」に手に入るであろうデータを取り扱う．
-データが手に入ったかどうかは，<code>valid</code>関数で調べることができ，<code>get</code>関数で取り出せる．
+<p>非同期処理を行うためのクラス．このクラスでは今は無いが，「未来」に手に入るであろうデータを取り扱う．<br />
+データが手に入ったかどうかは，<code>valid</code>関数で調べることができ，<code>get</code>関数で取り出せる．<br />
 また，手に入るまで待機する<code>wait</code>関数も何種類か用意されている．</p>
 
 <table class="-shortcuts">
@@ -351,8 +351,8 @@ A(){
 
 <h3 id="stdpromise"><a href="https://cpprefjp.github.io/reference/future/promise.html">std::promise</a></h3>
 
-<p><code>std::future</code>に出来上がったデータを受け渡す役割を持ったクラス．
-使い方は以下のような感じ．</p>
+<p><code>std::future</code>に出来上がったデータを受け渡す役割を持ったクラス<br />
+使い方は以下のような感じ</p>
 <pre><code class="language-cpp">std::promise&lt;int&gt; p;
 std::future&lt;int&gt; f = p.get_future();
 
@@ -361,7 +361,7 @@ p.set_value(1);
 std::cout &lt;&lt; f.get() &lt;&lt; std::endl;
 </code></pre>
 
-<p><code>std::primise</code>は，データを渡す相手に「今はまだ空だけど，将来ここにデータを送るからね」と言って<code>std::future</code>を渡す．
+<p><code>std::primise</code>は，データを渡す相手に「今はまだ空だけど，将来ここにデータを送るからね」と言って<code>std::future</code>を渡す．<br />
 後日，データを見つけたstd::promise<code>は</code>set_value<code>関数でデータを送り，</code>std::future<code>側では</code>get`関数で受けとれる．</p>
 
         </main>
@@ -608,7 +608,7 @@ function n(n,t,e){n.addEventListener?n.addEventListener(t,e):n.attachEvent("on"+
 },{}],"eoMl":[function(require,module,exports) {
 "use strict";var e=u(require("./wrapify")),d=u(require("dom101/add-class")),t=u(require("dom101/on"));function u(e){return e&&e.__esModule?e:{default:e}}var a,o=document.querySelector("[data-js-main-body]");function r(){a||((0,d.default)(document.documentElement,"LoadDone"),a=!0)}o&&((0,e.default)(o),(0,d.default)(o,"-wrapified")),(0,t.default)(window,"load",r),setTimeout(r,5e3);
 },{"./wrapify":"hE9p","dom101/add-class":"G20n","dom101/on":"DJ2P"}]},{},["eoMl"], null)</script>
-<script src='./assets/packed/app.js?t=20220831170334'></script>
+<script src='./assets/packed/app.js?t=20220831170640'></script>
 
 
 

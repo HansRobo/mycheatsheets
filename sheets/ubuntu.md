@@ -78,3 +78,10 @@ slack -u
 ```bash
  ln -s リンク元 登録名
 ```
+
+### XML -> YAMLの変換
+
+```bash
+sudo apt install libxml-compile-perl libconfig-yaml-perl
+xml2yaml -x xml.xml -s schema.xsd yaml.yaml
+```

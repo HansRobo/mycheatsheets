@@ -123,3 +123,14 @@ std::cout << f.get() << std::endl;
 
 `std::primise`は，データを渡す相手に「今はまだ空だけど，将来ここにデータを送るからね」と言って`std::future`を渡す．  
 後日，データを見つけたstd::promise`は`set_value`関数でデータを送り，`std::future`側では`get`関数で受けとれる．
+
+### [委譲コンストラクタ](https://cpprefjp.github.io/lang/cpp11/delegating_constructors.html)
+
+C++03以前では，コンストラクタ内の
+```cpp
+class X {
+public:
+  X(int i) { std::cout << i << std::endl; }
+  X() : X(42) {}
+};
+```

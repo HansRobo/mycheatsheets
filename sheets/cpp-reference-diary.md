@@ -124,7 +124,7 @@ std::cout << f.get() << std::endl;
 `std::primise`は，データを渡す相手に「今はまだ空だけど，将来ここにデータを送るからね」と言って`std::future`を渡す．  
 後日，データを見つけたstd::promise`は`set_value`関数でデータを送り，`std::future`側では`get`関数で受けとれる．
 
-### [委譲コンストラクタ](https://cpprefjp.github.io/lang/cpp11/delegating_constructors.html)
+### [委譲コンストラクタ(C++11)](https://cpprefjp.github.io/lang/cpp11/delegating_constructors.html)
 
 C++11からの機能．複数のコンストラクタ内で共通の処理を初期化処理で行える．  
 （コンストラクタの本体にメンバ関数を呼び出す方法もあるが，メンバ関数は初期化が完了した後にしか呼び出せない共通処理なので，ベタ書きしたり委譲コンストラクタを使う場合に比べてパフォーマンスで劣る）
@@ -135,3 +135,37 @@ public:
   X() : X(42) {}
 };
 ```
+
+### [初期化子リスト(C++11)](https://cpprefjp.github.io/lang/cpp11/initializer_lists.html)
+
+以下のような，波括弧による初期化を可能とする'
+
+```cpp
+std::vector<int> v1 = {1, 2, 3};
+std::vector<int> v2 {1, 2, 3};
+```
+
+初期化子リストを使うには，`std::initilizer_list`を引数とするコンストラクタが必要'
+
+```cpp
+class MyVector {
+  std::vector<int> data_;
+public:
+  MyVector(std::initializer_list<int> init)
+    : data_(init.begin(), init.end()) {}};
+```
+
+### [一様初期化(C++11)](https://cpprefjp.github.io/lang/cpp11/uniform_initialization.html)
+
+`std::initilizer_list`以外のコンストラクタも波括弧を使った初期化ができる機能  
+情報が足りていなかったりすると，`std::initializer_list`型として推論されてしまったりするので注意．
+
+```cpp
+struct X {
+  X(int, double, std::string) {}
+};
+X createX(){return {1, 3.14, "hello"}; }
+```
+
+`std::initializer_list`のコンストラクタとそれ以外のコンストラクタの両方で受け取れるような波括弧リストを渡す時，前者が呼び出される．  
+但し，空の初期化子リストを渡す場合はデフォルトコンストラクタが優先される．

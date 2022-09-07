@@ -169,3 +169,21 @@ X createX(){return {1, 3.14, "hello"}; }
 
 `std::initializer_list`のコンストラクタとそれ以外のコンストラクタの両方で受け取れるような波括弧リストを渡す時，前者が呼び出される．  
 但し，空の初期化子リストを渡す場合はデフォルトコンストラクタが優先される．
+
+### Coming Soon
+
+- [インライン名前空間(C++11)](https://cpprefjp.github.io/lang/cpp11/inline_namespaces.html)
+- [入れ子名前空間の定義(C++17)](https://cpprefjp.github.io/lang/cpp17/nested_namespace.html)
+- [入れ子名前空間でのインライン名前空間(C++20)](https://cpprefjp.github.io/lang/cpp20/nested_inline_mamespaces.html)
+- [範囲for文(C++11)](https://cpprefjp.github.io/lang/cpp11/range_based_for.html)
+- [範囲forループの制限緩和(C++17)](https://cpprefjp.github.io/lang/cpp17/generalizing_the_range-based_for_loop.html)
+- [範囲for文がカスタマイゼーションポイントを見つけるルールを緩和](https://cpprefjp.github.io/lang/cpp20/relaxing_the_range_for_loop_customization_point_finding_rules.html)
+- [属性構文(C++11)](https://cpprefjp.github.io/lang/cpp11/attributes.html)
+  - [deprecated(C++14)](https://cpprefjp.github.io/lang/cpp14/deprecated_attr.html)
+  - [maybe_unused(C++17)](https://cpprefjp.github.io/lang/cpp17/maybe_unused.html)
+  - [nodicard(C++17)](https://cpprefjp.github.io/lang/cpp17/nodiscard.html)
+  - [fallthrough(c++17)](https://cpprefjp.github.io/lang/cpp17/fallthrough.html)
+  - [no_unique_adress(c++20)](https://cpprefjp.github.io/lang/cpp20/language_support_for_empty_objects.html)
+  - [likely, unlikely (c++20)](https://cpprefjp.github.io/lang/cpp20/likely_and_unlikely_attributes.html)
+  - [属性の名前空間予約(c++20)](https://cpprefjp.github.io/lang/cpp20/reserving_attribute_namespaces_for_future_use.html)
+- [不明な属性を無視する(C++17)](https://cpprefjp.github.io/lang/cpp17/non_standard_attributes.html)

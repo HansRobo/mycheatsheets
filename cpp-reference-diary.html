@@ -35,8 +35,8 @@
 
 
 
-  <meta content='https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20220907162246' property='og:image'>
-  <meta content='https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20220907162246' property='twitter:image'>
+  <meta content='https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20220913140145' property='og:image'>
+  <meta content='https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20220913140145' property='twitter:image'>
   <meta content='900' property='og:image:width'>
   <meta content='471' property='og:image:height'>
 
@@ -105,11 +105,11 @@ gtag('config','UA-106902774-1');
 <!-- deferred css -->
 <script id='deferred-css'>;(function(links){(requestAnimationFrame||mozRequestAnimationFrame||webkitRequestAnimationFrame||msRequestAnimationFrame||(function(fn){window.addEventListener('load',fn)}))(function(){var h=document.getElementsByTagName('head')[0],l,i;for (i=0;i<links.length;i++){l=document.createElement('link');l.rel='stylesheet';l.href=links[i];h.appendChild(l);}})})([
 'https://fonts.googleapis.com/css?family=Cousine',
-'./assets/2017/style.css?t=20220907162246'
+'./assets/2017/style.css?t=20220913140145'
 ])</script>
 <noscript id='deferred-css-fallback'>
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Cousine'>
-<link rel='stylesheet' href='./assets/2017/style.css?t=20220907162246'>
+<link rel='stylesheet' href='./assets/2017/style.css?t=20220913140145'>
 </noscript>
 
     <script type='application/ld+json'>
@@ -121,7 +121,7 @@ gtag('config','UA-106902774-1');
     "@id": "https://google.com/article"
   },
   "headline": "cppreference.com 日記 cheatsheet",
-  "image": [ "https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20220907162246" ],
+  "image": [ "https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20220913140145" ],
   "description": "One-page guide to cppreference.com 日記: usage, examples, and more. cppreference.com日記"
 }
 </script>
@@ -406,6 +406,46 @@ X createX(){return {1, 3.14, "hello"}; }
 <p><code>std::initializer_list</code>のコンストラクタとそれ以外のコンストラクタの両方で受け取れるような波括弧リストを渡す時，前者が呼び出される．<br />
 但し，空の初期化子リストを渡す場合はデフォルトコンストラクタが優先される．</p>
 
+<h3 id="インライン名前空間c11"><a href="https://cpprefjp.github.io/lang/cpp11/inline_namespaces.html">インライン名前空間(C++11)</a></h3>
+
+<pre><code class="language-cpp">inline namespace my_namespace{}
+</code></pre>
+
+<p>省略可能な名前空間を定義できる．<br />
+上位の名前空間を<code>using</code>するだけで下位のinline名前空間の機能が使えるようになるので，本来なら複数の<code>using</code>文が必要な場合も，１つで事足りる．</p>
+
+<p>以下のように，複数バージョンの関数がそれぞれのバージョンの名前空間にある時，1つだけ<code>inline</code>名前空間で定義することでデフォルトのバージョンを表現することが出来る．<br />
+また，デフォルトバージョンを変更する場合も<code>inline</code>名前空間を切り替えるだけで実現できる．</p>
+
+<pre><code class="language-cpp">namespace api {
+  inline namespace v1 {
+    void f(){}
+  }
+  namespace v2 {
+    void f(){}
+  }
+}
+</code></pre>
+
+<h3 id="入れ子名前空間の定義c17"><a href="https://cpprefjp.github.io/lang/cpp17/nested_namespace.html">入れ子名前空間の定義(C++17)</a></h3>
+
+<p>入れ子上になった名前空間を一度に定義することが可能になる</p>
+
+<p>C++14まで</p>
+<pre><code class="language-cpp">namespace aa{
+  namespace bb{
+    void f(){}
+  }
+}
+</code></pre>
+
+<p>C++17から</p>
+<pre><code class="language-cpp">namespace aa::bb{
+  void f(){}
+}
+</code></pre>
+
+<p>###</p>
 <h3 id="coming-soon">Coming Soon</h3>
 
 <ul>
@@ -673,7 +713,7 @@ function n(n,t,e){n.addEventListener?n.addEventListener(t,e):n.attachEvent("on"+
 },{}],"eoMl":[function(require,module,exports) {
 "use strict";var e=u(require("./wrapify")),d=u(require("dom101/add-class")),t=u(require("dom101/on"));function u(e){return e&&e.__esModule?e:{default:e}}var a,o=document.querySelector("[data-js-main-body]");function r(){a||((0,d.default)(document.documentElement,"LoadDone"),a=!0)}o&&((0,e.default)(o),(0,d.default)(o,"-wrapified")),(0,t.default)(window,"load",r),setTimeout(r,5e3);
 },{"./wrapify":"hE9p","dom101/add-class":"G20n","dom101/on":"DJ2P"}]},{},["eoMl"], null)</script>
-<script src='./assets/packed/app.js?t=20220907162246'></script>
+<script src='./assets/packed/app.js?t=20220913140145'></script>
 
 
 

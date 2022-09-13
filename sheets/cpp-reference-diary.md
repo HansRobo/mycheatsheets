@@ -214,12 +214,26 @@ namespace aa::bb{
 }
 ```
 
-### 
-### Coming Soon
+### [入れ子名前空間でのインライン名前空間(C++20)](https://cpprefjp.github.io/lang/cpp20/nested_inline_mamespaces.html)
 
-- [インライン名前空間(C++11)](https://cpprefjp.github.io/lang/cpp11/inline_namespaces.html)
-- [入れ子名前空間の定義(C++17)](https://cpprefjp.github.io/lang/cpp17/nested_namespace.html)
-- [入れ子名前空間でのインライン名前空間(C++20)](https://cpprefjp.github.io/lang/cpp20/nested_inline_mamespaces.html)
+C++11からのインライン名前空間とC++17からの入れ子名前空間の併用は出来なかったが，C++20から出来るようになった
+
+C++17
+```cpp
+namespace aa{
+  inline namespace bb{
+    void f(){}
+  }
+}
+```
+C++20
+```cpp
+namespace aa::inline bb{
+  void f(){}
+}
+```
+
+### Coming Soon
 - [範囲for文(C++11)](https://cpprefjp.github.io/lang/cpp11/range_based_for.html)
 - [範囲forループの制限緩和(C++17)](https://cpprefjp.github.io/lang/cpp17/generalizing_the_range-based_for_loop.html)
 - [範囲for文がカスタマイゼーションポイントを見つけるルールを緩和](https://cpprefjp.github.io/lang/cpp20/relaxing_the_range_for_loop_customization_point_finding_rules.html)

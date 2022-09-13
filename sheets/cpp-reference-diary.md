@@ -170,6 +170,51 @@ X createX(){return {1, 3.14, "hello"}; }
 `std::initializer_list`のコンストラクタとそれ以外のコンストラクタの両方で受け取れるような波括弧リストを渡す時，前者が呼び出される．  
 但し，空の初期化子リストを渡す場合はデフォルトコンストラクタが優先される．
 
+### [インライン名前空間(C++11)](https://cpprefjp.github.io/lang/cpp11/inline_namespaces.html)
+
+```cpp
+inline namespace my_namespace{}
+```
+
+省略可能な名前空間を定義できる．  
+上位の名前空間を`using`するだけで下位のinline名前空間の機能が使えるようになるので，本来なら複数の`using`文が必要な場合も，１つで事足りる．  
+
+以下のように，複数バージョンの関数がそれぞれのバージョンの名前空間にある時，1つだけ`inline`名前空間で定義することでデフォルトのバージョンを表現することが出来る．  
+また，デフォルトバージョンを変更する場合も`inline`名前空間を切り替えるだけで実現できる．  
+
+```cpp
+namespace api {
+  inline namespace v1 {
+    void f(){}
+  }
+  namespace v2 {
+    void f(){}
+  }
+}
+```
+
+
+### [入れ子名前空間の定義(C++17)](https://cpprefjp.github.io/lang/cpp17/nested_namespace.html)
+
+入れ子上になった名前空間を一度に定義することが可能になる
+
+C++14まで
+```cpp
+namespace aa{
+  namespace bb{
+    void f(){}
+  }
+}
+```
+
+C++17から
+```cpp
+namespace aa::bb{
+  void f(){}
+}
+```
+
+### 
 ### Coming Soon
 
 - [インライン名前空間(C++11)](https://cpprefjp.github.io/lang/cpp11/inline_namespaces.html)

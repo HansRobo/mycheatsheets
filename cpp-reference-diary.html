@@ -35,8 +35,8 @@
 
 
 
-  <meta content='https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20220913142833' property='og:image'>
-  <meta content='https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20220913142833' property='twitter:image'>
+  <meta content='https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20220914131306' property='og:image'>
+  <meta content='https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20220914131306' property='twitter:image'>
   <meta content='900' property='og:image:width'>
   <meta content='471' property='og:image:height'>
 
@@ -105,11 +105,11 @@ gtag('config','UA-106902774-1');
 <!-- deferred css -->
 <script id='deferred-css'>;(function(links){(requestAnimationFrame||mozRequestAnimationFrame||webkitRequestAnimationFrame||msRequestAnimationFrame||(function(fn){window.addEventListener('load',fn)}))(function(){var h=document.getElementsByTagName('head')[0],l,i;for (i=0;i<links.length;i++){l=document.createElement('link');l.rel='stylesheet';l.href=links[i];h.appendChild(l);}})})([
 'https://fonts.googleapis.com/css?family=Cousine',
-'./assets/2017/style.css?t=20220913142833'
+'./assets/2017/style.css?t=20220914131306'
 ])</script>
 <noscript id='deferred-css-fallback'>
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Cousine'>
-<link rel='stylesheet' href='./assets/2017/style.css?t=20220913142833'>
+<link rel='stylesheet' href='./assets/2017/style.css?t=20220914131306'>
 </noscript>
 
     <script type='application/ld+json'>
@@ -121,7 +121,7 @@ gtag('config','UA-106902774-1');
     "@id": "https://google.com/article"
   },
   "headline": "cppreference.com 日記 cheatsheet",
-  "image": [ "https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20220913142833" ],
+  "image": [ "https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20220914131306" ],
   "description": "One-page guide to cppreference.com 日記: usage, examples, and more. cppreference.com日記"
 }
 </script>
@@ -462,6 +462,29 @@ X createX(){return {1, 3.14, "hello"}; }
 }
 </code></pre>
 
+<h3 id="範囲for文c11"><a href="https://cpprefjp.github.io/lang/cpp11/range_based_for.html">範囲for文(C++11)</a></h3>
+
+<p>for文を簡潔に書くことが出来る機能．</p>
+<pre><code class="language-cpp">for ( auto element : elements ) std::cout &lt;&lt; element &lt;&lt; std::endl;
+</code></pre>
+
+<p>↑は↓のように展開される（C++17以降や，配列を扱う時は展開され方が異なる）</p>
+
+<pre><code class="language-cpp">auto &amp;&amp; __range = elements;
+for (auto __begin = __range.begin(), __end = __range.end(); __begin != __end; ++__begin) {
+  auto element = *__begin;
+  std::cout &lt;&lt; element &lt;&lt; std::endl;
+}
+</code></pre>
+<p>↑から分かるように，<code>begin()</code>,<code>end()</code>,<code>operator++()</code>, <code>operator*()</code>, <code>operator!=()</code>が適切に定義されていれば自作クラスでも使える．</p>
+
+<p>注意点</p>
+<ul>
+  <li>要素をeraseしてはいけない(バグる)</li>
+  <li>インデックスの取得とは相性が悪い（出来ないこともない：<a href="https://hansrobo.github.io/mycheatsheets/range-based-for#:~:text=%E7%AF%84%E5%9B%B2for%E6%96%87(range%2Dbased%20for)%E3%81%A7%E3%82%A4%E3%83%B3%E3%83%87%E3%83%83%E3%82%AF%E3%82%B9%E3%82%92%E4%BD%BF%E3%81%84%E3%81%9F%E3%81%84">別ページ</a>参照）</li>
+  <li>範囲として渡した配列などが，範囲for文実行中に寿命が切れないように注意</li>
+</ul>
+
 <h3 id="coming-soon">Coming Soon</h3>
 <ul>
   <li><a href="https://cpprefjp.github.io/lang/cpp11/range_based_for.html">範囲for文(C++11)</a></li>
@@ -731,7 +754,7 @@ function n(n,t,e){n.addEventListener?n.addEventListener(t,e):n.attachEvent("on"+
 },{}],"eoMl":[function(require,module,exports) {
 "use strict";var e=u(require("./wrapify")),d=u(require("dom101/add-class")),t=u(require("dom101/on"));function u(e){return e&&e.__esModule?e:{default:e}}var a,o=document.querySelector("[data-js-main-body]");function r(){a||((0,d.default)(document.documentElement,"LoadDone"),a=!0)}o&&((0,e.default)(o),(0,d.default)(o,"-wrapified")),(0,t.default)(window,"load",r),setTimeout(r,5e3);
 },{"./wrapify":"hE9p","dom101/add-class":"G20n","dom101/on":"DJ2P"}]},{},["eoMl"], null)</script>
-<script src='./assets/packed/app.js?t=20220913142833'></script>
+<script src='./assets/packed/app.js?t=20220914131306'></script>
 
 
 

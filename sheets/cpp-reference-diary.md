@@ -233,6 +233,29 @@ namespace aa::inline bb{
 }
 ```
 
+### [範囲for文(C++11)](https://cpprefjp.github.io/lang/cpp11/range_based_for.html)
+
+for文を簡潔に書くことが出来る機能．
+```cpp
+for ( auto element : elements ) std::cout << element << std::endl;
+```
+
+↑は↓のように展開される（C++17以降や，配列を扱う時は展開され方が異なる）
+
+```cpp
+auto && __range = elements;
+for (auto __begin = __range.begin(), __end = __range.end(); __begin != __end; ++__begin) {
+  auto element = *__begin;
+  std::cout << element << std::endl;
+}
+```
+↑から分かるように，`begin()`,`end()`,`operator++()`, `operator*()`, `operator!=()`が適切に定義されていれば自作クラスでも使える．
+
+注意点
+- 要素をeraseしてはいけない(バグる)
+- インデックスの取得とは相性が悪い（出来ないこともない：[別ページ](https://hansrobo.github.io/mycheatsheets/range-based-for#:~:text=%E7%AF%84%E5%9B%B2for%E6%96%87(range%2Dbased%20for)%E3%81%A7%E3%82%A4%E3%83%B3%E3%83%87%E3%83%83%E3%82%AF%E3%82%B9%E3%82%92%E4%BD%BF%E3%81%84%E3%81%9F%E3%81%84)参照）
+- 範囲として渡した配列などが，範囲for文実行中に寿命が切れないように注意
+
 ### Coming Soon
 - [範囲for文(C++11)](https://cpprefjp.github.io/lang/cpp11/range_based_for.html)
 - [範囲forループの制限緩和(C++17)](https://cpprefjp.github.io/lang/cpp17/generalizing_the_range-based_for_loop.html)

@@ -256,10 +256,49 @@ for (auto __begin = __range.begin(), __end = __range.end(); __begin != __end; ++
 - インデックスの取得とは相性が悪い（出来ないこともない：[別ページ](https://hansrobo.github.io/mycheatsheets/range-based-for#:~:text=%E7%AF%84%E5%9B%B2for%E6%96%87(range%2Dbased%20for)%E3%81%A7%E3%82%A4%E3%83%B3%E3%83%87%E3%83%83%E3%82%AF%E3%82%B9%E3%82%92%E4%BD%BF%E3%81%84%E3%81%9F%E3%81%84)参照）
 - 範囲として渡した配列などが，範囲for文実行中に寿命が切れないように注意
 
+
+### [範囲forループの制限緩和(C++17)](https://cpprefjp.github.io/lang/cpp17/generalizing_the_range-based_for_loop.html)
+
+範囲for文を適用するコンテナの`begin()`関数と`end()`関数の戻り値の型が一致していなくても良くなった．  
+正直使う機会は少ないが，番兵法アルゴリズムを使いたいときなどは便利に使えるらしい．  
+使いたいから緩和したというより，制限する意味がなかったから緩和したという方が正しそう？  
+
+### [範囲for文がカスタマイゼーションポイントを見つけるルールを緩和](https://cpprefjp.github.io/lang/cpp20/relaxing_the_range_for_loop_customization_point_finding_rules.html)
+
+範囲for文を展開する時に`begin()`と`end()`を探すルールが変更された．（C++11まで遡って変更されていて，[gcc8,clang8以降で適用されている](https://cpprefjp.github.io/implementation-status.html#:~:text=%E3%81%97%E3%81%AB%E3%81%84%E3%81%8F-,8,8,-2019%20Update%205)）  
+
+適用前イメージ
+```cpp
+if ( beginメンバ関数が存在 OR endメンバ関数が存在 ){
+  beginメンバ関数を使用
+}else{
+  非メンバbegin/end関数を探す&使う
+}
+```
+
+適用後イメージ
+```cpp
+if ( beginメンバ関数が存在 AND endメンバ関数が存在 ){
+  begin/endメンバ関数を使用
+}else{
+  非メンバbegin/end関数を探す&使う
+}
+```
+
+[cppref.jpのページ](https://cpprefjp.github.io/lang/cpp20/relaxing_the_range_for_loop_customization_point_finding_rules.html)のサンプルコードは説明が少なくてわかりにくいので，以下解説  
+
+- そもそも`std_stringstream`には`begin()`と`end()`が存在しない
+- しかし，`std_stringstream`が継承している`std::ios_base`には[`std::ios_base::end`](https://cpprefjp.github.io/reference/ios/ios_base/type-seekdir.html#:~:text=current%20%E3%81%AE%E7%95%A5%EF%BC%89-,end,-%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%A0%E3%81%AE%E7%8F%BE%E5%9C%A8)(関数ではない)が存在する
+- `std::ios_base::end`が範囲for文に必要な`end`として認識される
+- 適用前のルールだと，`begin`の存在を確認することなくメンバ関数で範囲forの展開をしてしまう
+- 適用後のルールでは，`begin`の存在も確認を行うため，`std::ios_base::end`は範囲forの展開に使われない
+- 適用後のルールでは結局非メンバの`begin`と`end`が使われて問題なくコンパイルできる
+
+
+
+
+
 ### Coming Soon
-- [範囲for文(C++11)](https://cpprefjp.github.io/lang/cpp11/range_based_for.html)
-- [範囲forループの制限緩和(C++17)](https://cpprefjp.github.io/lang/cpp17/generalizing_the_range-based_for_loop.html)
-- [範囲for文がカスタマイゼーションポイントを見つけるルールを緩和](https://cpprefjp.github.io/lang/cpp20/relaxing_the_range_for_loop_customization_point_finding_rules.html)
 - [属性構文(C++11)](https://cpprefjp.github.io/lang/cpp11/attributes.html)
   - [deprecated(C++14)](https://cpprefjp.github.io/lang/cpp14/deprecated_attr.html)
   - [maybe_unused(C++17)](https://cpprefjp.github.io/lang/cpp17/maybe_unused.html)

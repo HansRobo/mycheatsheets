@@ -35,8 +35,8 @@
 
 
 
-  <meta content='https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20220914131306' property='og:image'>
-  <meta content='https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20220914131306' property='twitter:image'>
+  <meta content='https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20220918051727' property='og:image'>
+  <meta content='https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20220918051727' property='twitter:image'>
   <meta content='900' property='og:image:width'>
   <meta content='471' property='og:image:height'>
 
@@ -105,11 +105,11 @@ gtag('config','UA-106902774-1');
 <!-- deferred css -->
 <script id='deferred-css'>;(function(links){(requestAnimationFrame||mozRequestAnimationFrame||webkitRequestAnimationFrame||msRequestAnimationFrame||(function(fn){window.addEventListener('load',fn)}))(function(){var h=document.getElementsByTagName('head')[0],l,i;for (i=0;i<links.length;i++){l=document.createElement('link');l.rel='stylesheet';l.href=links[i];h.appendChild(l);}})})([
 'https://fonts.googleapis.com/css?family=Cousine',
-'./assets/2017/style.css?t=20220914131306'
+'./assets/2017/style.css?t=20220918051727'
 ])</script>
 <noscript id='deferred-css-fallback'>
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Cousine'>
-<link rel='stylesheet' href='./assets/2017/style.css?t=20220914131306'>
+<link rel='stylesheet' href='./assets/2017/style.css?t=20220918051727'>
 </noscript>
 
     <script type='application/ld+json'>
@@ -121,7 +121,7 @@ gtag('config','UA-106902774-1');
     "@id": "https://google.com/article"
   },
   "headline": "cppreference.com 日記 cheatsheet",
-  "image": [ "https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20220914131306" ],
+  "image": [ "https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20220918051727" ],
   "description": "One-page guide to cppreference.com 日記: usage, examples, and more. cppreference.com日記"
 }
 </script>
@@ -485,11 +485,45 @@ for (auto __begin = __range.begin(), __end = __range.end(); __begin != __end; ++
   <li>範囲として渡した配列などが，範囲for文実行中に寿命が切れないように注意</li>
 </ul>
 
+<h3 id="範囲forループの制限緩和c17"><a href="https://cpprefjp.github.io/lang/cpp17/generalizing_the_range-based_for_loop.html">範囲forループの制限緩和(C++17)</a></h3>
+
+<p>範囲for文を適用するコンテナの<code>begin()</code>関数と<code>end()</code>関数の戻り値の型が一致していなくても良くなった．<br />
+正直使う機会は少ないが，番兵法アルゴリズムを使いたいときなどは便利に使えるらしい．<br />
+使いたいから緩和したというより，制限する意味がなかったから緩和したという方が正しそう？</p>
+
+<h3 id="範囲for文がカスタマイゼーションポイントを見つけるルールを緩和"><a href="https://cpprefjp.github.io/lang/cpp20/relaxing_the_range_for_loop_customization_point_finding_rules.html">範囲for文がカスタマイゼーションポイントを見つけるルールを緩和</a></h3>
+
+<p>範囲for文を展開する時に<code>begin()</code>と<code>end()</code>を探すルールが変更された．（C++11まで遡って変更されていて，<a href="https://cpprefjp.github.io/implementation-status.html#:~:text=%E3%81%97%E3%81%AB%E3%81%84%E3%81%8F-,8,8,-2019%20Update%205">gcc8,clang8以降で適用されている</a>）</p>
+
+<p>適用前イメージ</p>
+<pre><code class="language-cpp">if ( beginメンバ関数が存在 OR endメンバ関数が存在 ){
+  beginメンバ関数を使用
+}else{
+  非メンバbegin/end関数を探す&amp;使う
+}
+</code></pre>
+
+<p>適用後イメージ</p>
+<pre><code class="language-cpp">if ( beginメンバ関数が存在 AND endメンバ関数が存在 ){
+  begin/endメンバ関数を使用
+}else{
+  非メンバbegin/end関数を探す&amp;使う
+}
+</code></pre>
+
+<p><a href="https://cpprefjp.github.io/lang/cpp20/relaxing_the_range_for_loop_customization_point_finding_rules.html">cppref.jpのページ</a>のサンプルコードは説明が少なくてわかりにくいので，以下解説</p>
+
+<ul>
+  <li>そもそも<code>std_stringstream</code>には<code>begin()</code>と<code>end()</code>が存在しない</li>
+  <li>しかし，<code>std_stringstream</code>が継承している<code>std::ios_base</code>には<a href="https://cpprefjp.github.io/reference/ios/ios_base/type-seekdir.html#:~:text=current%20%E3%81%AE%E7%95%A5%EF%BC%89-,end,-%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%A0%E3%81%AE%E7%8F%BE%E5%9C%A8"><code>std::ios_base::end</code></a>(関数ではない)が存在する</li>
+  <li><code>std::ios_base::end</code>が範囲for文に必要な<code>end</code>として認識される</li>
+  <li>適用前のルールだと，<code>begin</code>の存在を確認することなくメンバ関数で範囲forの展開をしてしまう</li>
+  <li>適用後のルールでは，<code>begin</code>の存在も確認を行うため，<code>std::ios_base::end</code>は範囲forの展開に使われない</li>
+  <li>適用後のルールでは結局非メンバの<code>begin</code>と<code>end</code>が使われて問題なくコンパイルできる</li>
+</ul>
+
 <h3 id="coming-soon">Coming Soon</h3>
 <ul>
-  <li><a href="https://cpprefjp.github.io/lang/cpp11/range_based_for.html">範囲for文(C++11)</a></li>
-  <li><a href="https://cpprefjp.github.io/lang/cpp17/generalizing_the_range-based_for_loop.html">範囲forループの制限緩和(C++17)</a></li>
-  <li><a href="https://cpprefjp.github.io/lang/cpp20/relaxing_the_range_for_loop_customization_point_finding_rules.html">範囲for文がカスタマイゼーションポイントを見つけるルールを緩和</a></li>
   <li><a href="https://cpprefjp.github.io/lang/cpp11/attributes.html">属性構文(C++11)</a>
     <ul>
       <li><a href="https://cpprefjp.github.io/lang/cpp14/deprecated_attr.html">deprecated(C++14)</a></li>
@@ -754,7 +788,7 @@ function n(n,t,e){n.addEventListener?n.addEventListener(t,e):n.attachEvent("on"+
 },{}],"eoMl":[function(require,module,exports) {
 "use strict";var e=u(require("./wrapify")),d=u(require("dom101/add-class")),t=u(require("dom101/on"));function u(e){return e&&e.__esModule?e:{default:e}}var a,o=document.querySelector("[data-js-main-body]");function r(){a||((0,d.default)(document.documentElement,"LoadDone"),a=!0)}o&&((0,e.default)(o),(0,d.default)(o,"-wrapified")),(0,t.default)(window,"load",r),setTimeout(r,5e3);
 },{"./wrapify":"hE9p","dom101/add-class":"G20n","dom101/on":"DJ2P"}]},{},["eoMl"], null)</script>
-<script src='./assets/packed/app.js?t=20220914131306'></script>
+<script src='./assets/packed/app.js?t=20220918051727'></script>
 
 
 

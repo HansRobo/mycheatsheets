@@ -79,3 +79,24 @@ endif()
 
 ament_auto_package()
 ```
+
+### ros_system_fingerprint
+
+ROSのためのシステム状態を一括で出力するコマンド
+
+```bash
+ros2 run system_fingerprint imprint
+```
+
+[MetroRobots/ros_system_fingerprint](https://github.com/MetroRobots/ros_system_fingerprint/tree/ros2)
+
+以下のものが出力に含まれる
+
+- システム情報（カーネルバージョンなど）
+- 環境変数
+- 起動しているノード情報
+- パラメータ情報
+- サービス・アクション・トピック情報
+- ROSワークスペース情報
+
+出力例は[こちら](https://github.com/MetroRobots/ros_system_fingerprint/blob/ros2/example_fingerprint.yaml)

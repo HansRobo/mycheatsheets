@@ -301,7 +301,17 @@ if ( beginメンバ関数が存在 AND endメンバ関数が存在 ){
 主に，コンパイラの最適化のためと警告抑制のために使われる印象  
 型などとは違い，ユーザが属性を定義することは出来ない．  
 
-### [[[noreturn]]属性(C++)](https://cpprefjp.github.io/lang/cpp11/attributes.html#noreturn)
+現在存在するのは以下
+- [noreturn(C++11)](https://cpprefjp.github.io/lang/cpp11/attributes.html#noreturn)
+- [carries_dependency(C++11)](https://cpprefjp.github.io/lang/cpp11/attributes.html#carries_dependency)
+- [deprecated(C++14)](https://cpprefjp.github.io/lang/cpp14/deprecated_attr.html)
+- [maybe_unused(C++17)](https://cpprefjp.github.io/lang/cpp17/maybe_unused.html)
+- [nodicard(C++17)](https://cpprefjp.github.io/lang/cpp17/nodiscard.html)
+- [fallthrough(c++17)](https://cpprefjp.github.io/lang/cpp17/fallthrough.html)
+- [no_unique_adress(c++20)](https://cpprefjp.github.io/lang/cpp20/language_support_for_empty_objects.html)
+- [likely, unlikely (c++20)](https://cpprefjp.github.io/lang/cpp20/likely_and_unlikely_attributes.html)
+
+### [[[noreturn]]属性(C++11)](https://cpprefjp.github.io/lang/cpp11/attributes.html#noreturn)
 
 ⇒警告抑制タイプの属性：「関数が返らないパスが存在する」という警告を抑制  
 ⇒最適化促進タイプの属性：制約を増して最適化に寄与  
@@ -314,7 +324,7 @@ if ( beginメンバ関数が存在 AND endメンバ関数が存在 ){
 関数が決して返らない（=必ず例外が投げられる？）ことをコンパイラに伝える．
 この属性がついた関数が返る場合の動作は未定義
 
-### [[[carries_dependency]]属性(C++)](https://cpprefjp.github.io/lang/cpp11/attributes.html#carries_dependency)
+### [[[carries_dependency]]属性(C++11)](https://cpprefjp.github.io/lang/cpp11/attributes.html#carries_dependency)
 
 TBD  
 
@@ -340,3 +350,5 @@ TODO:
 - [依存名に対するtypenameとtemplateの制限緩和(C++11)](https://cpprefjp.github.io/lang/cpp11/dependent_name_specifier_outside_of_templates.html)
 - [可変引数テンプレート](https://cpprefjp.github.io/lang/cpp11/variadic_templates.html)
 - [継承コンストラクタ(C++11)](https://cpprefjp.github.io/lang/cpp11/inheriting_constructors.html)
+- mutex
+- lock_gard

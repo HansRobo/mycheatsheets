@@ -35,8 +35,8 @@
 
 
 
-  <meta content='https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20221004104852' property='og:image'>
-  <meta content='https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20221004104852' property='twitter:image'>
+  <meta content='https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20221004105334' property='og:image'>
+  <meta content='https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20221004105334' property='twitter:image'>
   <meta content='900' property='og:image:width'>
   <meta content='471' property='og:image:height'>
 
@@ -105,11 +105,11 @@ gtag('config','UA-106902774-1');
 <!-- deferred css -->
 <script id='deferred-css'>;(function(links){(requestAnimationFrame||mozRequestAnimationFrame||webkitRequestAnimationFrame||msRequestAnimationFrame||(function(fn){window.addEventListener('load',fn)}))(function(){var h=document.getElementsByTagName('head')[0],l,i;for (i=0;i<links.length;i++){l=document.createElement('link');l.rel='stylesheet';l.href=links[i];h.appendChild(l);}})})([
 'https://fonts.googleapis.com/css?family=Cousine',
-'./assets/2017/style.css?t=20221004104852'
+'./assets/2017/style.css?t=20221004105334'
 ])</script>
 <noscript id='deferred-css-fallback'>
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Cousine'>
-<link rel='stylesheet' href='./assets/2017/style.css?t=20221004104852'>
+<link rel='stylesheet' href='./assets/2017/style.css?t=20221004105334'>
 </noscript>
 
     <script type='application/ld+json'>
@@ -121,7 +121,7 @@ gtag('config','UA-106902774-1');
     "@id": "https://google.com/article"
   },
   "headline": "cppreference.com 日記 cheatsheet",
-  "image": [ "https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20221004104852" ],
+  "image": [ "https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20221004105334" ],
   "description": "One-page guide to cppreference.com 日記: usage, examples, and more. cppreference.com日記"
 }
 </script>
@@ -528,7 +528,19 @@ for (auto __begin = __range.begin(), __end = __range.end(); __begin != __end; ++
 主に，コンパイラの最適化のためと警告抑制のために使われる印象<br />
 型などとは違い，ユーザが属性を定義することは出来ない．</p>
 
-<h3 id="noreturn属性c"><a href="https://cpprefjp.github.io/lang/cpp11/attributes.html#noreturn">[[noreturn]]属性(C++)</a></h3>
+<p>現在存在するのは以下</p>
+<ul>
+  <li><a href="https://cpprefjp.github.io/lang/cpp11/attributes.html#noreturn">noreturn(C++11)</a></li>
+  <li><a href="https://cpprefjp.github.io/lang/cpp11/attributes.html#carries_dependency">carries_dependency(C++11)</a></li>
+  <li><a href="https://cpprefjp.github.io/lang/cpp14/deprecated_attr.html">deprecated(C++14)</a></li>
+  <li><a href="https://cpprefjp.github.io/lang/cpp17/maybe_unused.html">maybe_unused(C++17)</a></li>
+  <li><a href="https://cpprefjp.github.io/lang/cpp17/nodiscard.html">nodicard(C++17)</a></li>
+  <li><a href="https://cpprefjp.github.io/lang/cpp17/fallthrough.html">fallthrough(c++17)</a></li>
+  <li><a href="https://cpprefjp.github.io/lang/cpp20/language_support_for_empty_objects.html">no_unique_adress(c++20)</a></li>
+  <li><a href="https://cpprefjp.github.io/lang/cpp20/likely_and_unlikely_attributes.html">likely, unlikely (c++20)</a></li>
+</ul>
+
+<h3 id="noreturn属性c11"><a href="https://cpprefjp.github.io/lang/cpp11/attributes.html#noreturn">[[noreturn]]属性(C++11)</a></h3>
 
 <p>⇒警告抑制タイプの属性：「関数が返らないパスが存在する」という警告を抑制<br />
 ⇒最適化促進タイプの属性：制約を増して最適化に寄与</p>
@@ -540,7 +552,7 @@ for (auto __begin = __range.begin(), __end = __range.end(); __begin != __end; ++
 <p>関数が決して返らない（=必ず例外が投げられる？）ことをコンパイラに伝える．
 この属性がついた関数が返る場合の動作は未定義</p>
 
-<h3 id="carries_dependency属性c"><a href="https://cpprefjp.github.io/lang/cpp11/attributes.html#carries_dependency">[[carries_dependency]]属性(C++)</a></h3>
+<h3 id="carries_dependency属性c11"><a href="https://cpprefjp.github.io/lang/cpp11/attributes.html#carries_dependency">[[carries_dependency]]属性(C++11)</a></h3>
 
 <p>TBD</p>
 
@@ -570,6 +582,8 @@ for (auto __begin = __range.begin(), __end = __range.end(); __begin != __end; ++
   <li><a href="https://cpprefjp.github.io/lang/cpp11/dependent_name_specifier_outside_of_templates.html">依存名に対するtypenameとtemplateの制限緩和(C++11)</a></li>
   <li><a href="https://cpprefjp.github.io/lang/cpp11/variadic_templates.html">可変引数テンプレート</a></li>
   <li><a href="https://cpprefjp.github.io/lang/cpp11/inheriting_constructors.html">継承コンストラクタ(C++11)</a></li>
+  <li>mutex</li>
+  <li>lock_gard</li>
 </ul>
 
         </main>
@@ -816,7 +830,7 @@ function n(n,t,e){n.addEventListener?n.addEventListener(t,e):n.attachEvent("on"+
 },{}],"eoMl":[function(require,module,exports) {
 "use strict";var e=u(require("./wrapify")),d=u(require("dom101/add-class")),t=u(require("dom101/on"));function u(e){return e&&e.__esModule?e:{default:e}}var a,o=document.querySelector("[data-js-main-body]");function r(){a||((0,d.default)(document.documentElement,"LoadDone"),a=!0)}o&&((0,e.default)(o),(0,d.default)(o,"-wrapified")),(0,t.default)(window,"load",r),setTimeout(r,5e3);
 },{"./wrapify":"hE9p","dom101/add-class":"G20n","dom101/on":"DJ2P"}]},{},["eoMl"], null)</script>
-<script src='./assets/packed/app.js?t=20221004104852'></script>
+<script src='./assets/packed/app.js?t=20221004105334'></script>
 
 
 

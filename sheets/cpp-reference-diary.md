@@ -321,7 +321,7 @@ if ( beginメンバ関数が存在 AND endメンバ関数が存在 ){
   throw std::runtime_error("error");
 }
 ```
-関数が決して返らない（=必ず例外が投げられる？）ことをコンパイラに伝える．
+関数が決して返らない（=必ず例外が投げられる？）ことをコンパイラに伝える  
 この属性がついた関数が返る場合の動作は未定義
 
 ### [[[carries_dependency]]属性(C++11)](https://cpprefjp.github.io/lang/cpp11/attributes.html#carries_dependency)

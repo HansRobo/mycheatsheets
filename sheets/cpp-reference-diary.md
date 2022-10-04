@@ -295,6 +295,32 @@ if ( beginメンバ関数が存在 AND endメンバ関数が存在 ){
 - 適用後のルールでは結局非メンバの`begin`と`end`が使われて問題なくコンパイルできる
 
 
+### [属性構文(C++11)](https://cpprefjp.github.io/lang/cpp11/attributes.html)
+
+ソースコードに関する追加の情報をコンパイラに伝えるための構文  
+主に，コンパイラの最適化のためと警告抑制のために使われる印象  
+型などとは違い，ユーザが属性を定義することは出来ない．  
+
+### [[[noreturn]]属性(C++)](https://cpprefjp.github.io/lang/cpp11/attributes.html#noreturn)
+
+⇒警告抑制タイプの属性：「関数が返らないパスが存在する」という警告を抑制  
+⇒最適化促進タイプの属性：制約を増して最適化に寄与  
+
+```cpp
+[[noreturn]] void report_error(){
+  throw std::runtime_error("error");
+}
+```
+関数が決して返らない（=必ず例外が投げられる？）ことをコンパイラに伝える．
+この属性がついた関数が返る場合の動作は未定義
+
+### [[[carries_dependency]]属性(C++)](https://cpprefjp.github.io/lang/cpp11/attributes.html#carries_dependency)
+
+TBD  
+
+TODO: 
+- [std::atomic](https://cpprefjp.github.io/reference/atomic/atomic.html)
+- [std::memory_order](https://cpprefjp.github.io/reference/atomic/memory_order.html)
 
 
 

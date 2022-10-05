@@ -85,3 +85,17 @@ slack -u
 sudo apt install libxml-compile-perl libconfig-yaml-perl
 xml2yaml -x xml.xml -s schema.xsd yaml.yaml
 ```
+
+### キャッシュクリア色々
+
+#### apt
+
+```bash
+sudo apt clean
+sudo apt --fix-broken install
+```
+#### pip
+
+```bash
+rm -rf ~/.cache/pip
+```

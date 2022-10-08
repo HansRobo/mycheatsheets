@@ -338,7 +338,14 @@ TODO:
 ```
 非推奨であることを示す属性．使うとコンパイル時に警告を発する  
 警告で出すメッセージも指定できるので，代わりに使って欲しい機能を示すとより親切  
-この属性はクラス・型の別名・変数・非静的メンバ変数・関数・列挙型・テンプレートの特殊などに付与できる
+この属性が使える場所は以下の通り
+- クラス
+- 型の別名
+- 変数
+- 非静的メンバ変数
+- 関数
+- 列挙型
+- テンプレートの特殊化
 ### [maybe_unused(C++17)](https://cpprefjp.github.io/lang/cpp17/maybe_unused.html)
 
 ⇒警告抑制タイプの属性：意図して使ってない要素に対してコンパイラに文句を言わせない   
@@ -349,7 +356,6 @@ class [[maybe_unused]] X;
 using integer [[maybe_unused]] = int;
 [[maybe_unused]] typedef int integer;
 [[maybe_unused]] void f();
-
 template <class T>
 [[maybe_unused]] inline void f();
 enum class [[maybe_unused]] E {

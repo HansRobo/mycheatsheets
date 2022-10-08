@@ -332,8 +332,37 @@ TODO:
 - [std::atomic](https://cpprefjp.github.io/reference/atomic/atomic.html)
 - [std::memory_order](https://cpprefjp.github.io/reference/atomic/memory_order.html)
 
+### [deprecated(C++14)](https://cpprefjp.github.io/lang/cpp14/deprecated_attr.html)
+```cpp
+[[deprecated("please use new_func() function")]] void old_func() {}
+```
+非推奨であることを示す属性．使うとコンパイル時に警告を発する  
+警告で出すメッセージも指定できるので，代わりに使って欲しい機能を示すとより親切  
+この属性はクラス・型の別名・変数・非静的メンバ変数・関数・列挙型・テンプレートの特殊などに付与できる
+### [maybe_unused(C++17)](https://cpprefjp.github.io/lang/cpp17/maybe_unused.html)
 
+⇒警告抑制タイプの属性：意図して使ってない要素に対してコンパイラに文句を言わせない   
 
+主に，各種宣言部分で色々使える
+```cpp
+class [[maybe_unused]] X;
+using integer [[maybe_unused]] = int;
+[[maybe_unused]] typedef int integer;
+[[maybe_unused]] void f();
+
+template <class T>
+[[maybe_unused]] inline void f();
+enum class [[maybe_unused]] E {
+  A [[maybe_unused]],
+  B
+};
+```
+  
+関数の引数の場合，maybe_unusedを指定せずとも，引数名を定義しないことで警告を抑制できる．  
+```cpp
+void func1([[maybe_unused]]int unused_arg){}
+void func2(int){}
+```
 ### Coming Soon
 - [属性構文(C++11)](https://cpprefjp.github.io/lang/cpp11/attributes.html)
   - [deprecated(C++14)](https://cpprefjp.github.io/lang/cpp14/deprecated_attr.html)

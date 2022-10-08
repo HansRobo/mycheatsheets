@@ -346,6 +346,8 @@ TODO:
 - 関数
 - 列挙型
 - テンプレートの特殊化
+
+
 ### [maybe_unused(C++17)](https://cpprefjp.github.io/lang/cpp17/maybe_unused.html)
 
 ⇒警告抑制タイプの属性：意図して使ってない要素に対してコンパイラに文句を言わせない   

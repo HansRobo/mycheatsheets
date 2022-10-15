@@ -35,8 +35,8 @@
 
 
 
-  <meta content='https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20221015123634' property='og:image'>
-  <meta content='https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20221015123634' property='twitter:image'>
+  <meta content='https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20221015124130' property='og:image'>
+  <meta content='https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20221015124130' property='twitter:image'>
   <meta content='900' property='og:image:width'>
   <meta content='471' property='og:image:height'>
 
@@ -105,11 +105,11 @@ gtag('config','UA-106902774-1');
 <!-- deferred css -->
 <script id='deferred-css'>;(function(links){(requestAnimationFrame||mozRequestAnimationFrame||webkitRequestAnimationFrame||msRequestAnimationFrame||(function(fn){window.addEventListener('load',fn)}))(function(){var h=document.getElementsByTagName('head')[0],l,i;for (i=0;i<links.length;i++){l=document.createElement('link');l.rel='stylesheet';l.href=links[i];h.appendChild(l);}})})([
 'https://fonts.googleapis.com/css?family=Cousine',
-'./assets/2017/style.css?t=20221015123634'
+'./assets/2017/style.css?t=20221015124130'
 ])</script>
 <noscript id='deferred-css-fallback'>
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Cousine'>
-<link rel='stylesheet' href='./assets/2017/style.css?t=20221015123634'>
+<link rel='stylesheet' href='./assets/2017/style.css?t=20221015124130'>
 </noscript>
 
     <script type='application/ld+json'>
@@ -121,7 +121,7 @@ gtag('config','UA-106902774-1');
     "@id": "https://google.com/article"
   },
   "headline": "cppreference.com 日記 cheatsheet",
-  "image": [ "https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20221015123634" ],
+  "image": [ "https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20221015124130" ],
   "description": "One-page guide to cppreference.com 日記: usage, examples, and more. cppreference.com日記"
 }
 </script>
@@ -540,7 +540,7 @@ for (auto __begin = __range.begin(), __end = __range.end(); __begin != __end; ++
   <li><a href="https://cpprefjp.github.io/lang/cpp20/likely_and_unlikely_attributes.html">likely, unlikely (c++20)</a></li>
 </ul>
 
-<h3 id="noreturn属性c11"><a href="https://cpprefjp.github.io/lang/cpp11/attributes.html#noreturn">[[noreturn]]属性(C++11)</a></h3>
+<h3 id="noreturn属性c11"><a href="https://cpprefjp.github.io/lang/cpp11/attributes.html#noreturn">noreturn属性(C++11)</a></h3>
 
 <p>⇒警告抑制タイプの属性：「関数が返らないパスが存在する」という警告を抑制<br />
 ⇒最適化促進タイプの属性：制約を増して最適化に寄与</p>
@@ -552,7 +552,7 @@ for (auto __begin = __range.begin(), __end = __range.end(); __begin != __end; ++
 <p>関数が決して返らない（=必ず例外が投げられる？）ことをコンパイラに伝える<br />
 この属性がついた関数が返る場合の動作は未定義</p>
 
-<h3 id="carries_dependency属性c11"><a href="https://cpprefjp.github.io/lang/cpp11/attributes.html#carries_dependency">[[carries_dependency]]属性(C++11)</a></h3>
+<h3 id="carries_dependency属性c11"><a href="https://cpprefjp.github.io/lang/cpp11/attributes.html#carries_dependency">carries_dependency属性(C++11)</a></h3>
 
 <p>TBD</p>
 
@@ -562,7 +562,7 @@ for (auto __begin = __range.begin(), __end = __range.end(); __begin != __end; ++
   <li><a href="https://cpprefjp.github.io/reference/atomic/memory_order.html">std::memory_order</a></li>
 </ul>
 
-<h3 id="deprecatedc14"><a href="https://cpprefjp.github.io/lang/cpp14/deprecated_attr.html">deprecated(C++14)</a></h3>
+<h3 id="deprecated属性c14"><a href="https://cpprefjp.github.io/lang/cpp14/deprecated_attr.html">deprecated属性(C++14)</a></h3>
 <pre><code class="language-cpp">[[deprecated("please use new_func() function")]] void old_func() {}
 </code></pre>
 <p>非推奨であることを示す属性．使うとコンパイル時に警告を発する<br />
@@ -578,7 +578,7 @@ for (auto __begin = __range.begin(), __end = __range.end(); __begin != __end; ++
   <li>テンプレートの特殊化</li>
 </ul>
 
-<h3 id="maybe_unusedc17"><a href="https://cpprefjp.github.io/lang/cpp17/maybe_unused.html">maybe_unused(C++17)</a></h3>
+<h3 id="maybe_unused属性c17"><a href="https://cpprefjp.github.io/lang/cpp17/maybe_unused.html">maybe_unused属性(C++17)</a></h3>
 
 <p>⇒警告抑制タイプの属性：意図して使ってない要素に対してコンパイラに文句を言わせない</p>
 
@@ -600,7 +600,7 @@ enum class [[maybe_unused]] E {
 void func2(int){}
 </code></pre>
 
-<h3 id="nodicardc17"><a href="https://cpprefjp.github.io/lang/cpp17/nodiscard.html">nodicard(C++17)</a></h3>
+<h3 id="nodiscard属性c17"><a href="https://cpprefjp.github.io/lang/cpp17/nodiscard.html">nodiscard属性(C++17)</a></h3>
 
 <p>「関数の戻り値を破棄してはいけない」という情報をコンパイラに伝え，エラー処理など本来無視してはならない戻り値の意図しない無視をプログラマに警告として伝えるための属性である．</p>
 
@@ -616,7 +616,7 @@ void func2(int){}
   <li><a href="https://cpprefjp.github.io/lang/cpp20/nodiscard_should_have_a_reason.html">警告の理由の文字列を付加できるように</a></li>
 </ul>
 
-<h3 id="fallthroughc17"><a href="https://cpprefjp.github.io/lang/cpp17/fallthrough.html">fallthrough(c++17)</a></h3>
+<h3 id="fallthrough属性c17"><a href="https://cpprefjp.github.io/lang/cpp17/fallthrough.html">fallthrough属性(C++17)</a></h3>
 
 <p>switch-case文においてcaseの次にbreak文を置かないことで連続の複数のcaseに渡ってプログラムが実行されること（fallthrough）は，
 しばしば悪用されるが，プログラマが見落としやすくバグにもつながりやすい．そのため，コンパイラはフォールスルーを検知すると警告を出す．
@@ -898,7 +898,7 @@ function n(n,t,e){n.addEventListener?n.addEventListener(t,e):n.attachEvent("on"+
 },{}],"eoMl":[function(require,module,exports) {
 "use strict";var e=u(require("./wrapify")),d=u(require("dom101/add-class")),t=u(require("dom101/on"));function u(e){return e&&e.__esModule?e:{default:e}}var a,o=document.querySelector("[data-js-main-body]");function r(){a||((0,d.default)(document.documentElement,"LoadDone"),a=!0)}o&&((0,e.default)(o),(0,d.default)(o,"-wrapified")),(0,t.default)(window,"load",r),setTimeout(r,5e3);
 },{"./wrapify":"hE9p","dom101/add-class":"G20n","dom101/on":"DJ2P"}]},{},["eoMl"], null)</script>
-<script src='./assets/packed/app.js?t=20221015123634'></script>
+<script src='./assets/packed/app.js?t=20221015124130'></script>
 
 
 

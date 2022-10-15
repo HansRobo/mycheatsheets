@@ -35,8 +35,8 @@
 
 
 
-  <meta content='https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20221015122649' property='og:image'>
-  <meta content='https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20221015122649' property='twitter:image'>
+  <meta content='https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20221015123634' property='og:image'>
+  <meta content='https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20221015123634' property='twitter:image'>
   <meta content='900' property='og:image:width'>
   <meta content='471' property='og:image:height'>
 
@@ -105,11 +105,11 @@ gtag('config','UA-106902774-1');
 <!-- deferred css -->
 <script id='deferred-css'>;(function(links){(requestAnimationFrame||mozRequestAnimationFrame||webkitRequestAnimationFrame||msRequestAnimationFrame||(function(fn){window.addEventListener('load',fn)}))(function(){var h=document.getElementsByTagName('head')[0],l,i;for (i=0;i<links.length;i++){l=document.createElement('link');l.rel='stylesheet';l.href=links[i];h.appendChild(l);}})})([
 'https://fonts.googleapis.com/css?family=Cousine',
-'./assets/2017/style.css?t=20221015122649'
+'./assets/2017/style.css?t=20221015123634'
 ])</script>
 <noscript id='deferred-css-fallback'>
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Cousine'>
-<link rel='stylesheet' href='./assets/2017/style.css?t=20221015122649'>
+<link rel='stylesheet' href='./assets/2017/style.css?t=20221015123634'>
 </noscript>
 
     <script type='application/ld+json'>
@@ -121,7 +121,7 @@ gtag('config','UA-106902774-1');
     "@id": "https://google.com/article"
   },
   "headline": "cppreference.com 日記 cheatsheet",
-  "image": [ "https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20221015122649" ],
+  "image": [ "https://assets.devhints.io/previews/cpp-reference-diary.jpg?t=20221015123634" ],
   "description": "One-page guide to cppreference.com 日記: usage, examples, and more. cppreference.com日記"
 }
 </script>
@@ -616,11 +616,27 @@ void func2(int){}
   <li><a href="https://cpprefjp.github.io/lang/cpp20/nodiscard_should_have_a_reason.html">警告の理由の文字列を付加できるように</a></li>
 </ul>
 
+<h3 id="fallthroughc17"><a href="https://cpprefjp.github.io/lang/cpp17/fallthrough.html">fallthrough(c++17)</a></h3>
+
+<p>switch-case文においてcaseの次にbreak文を置かないことで連続の複数のcaseに渡ってプログラムが実行されること（fallthrough）は，
+しばしば悪用されるが，プログラマが見落としやすくバグにもつながりやすい．そのため，コンパイラはフォールスルーを検知すると警告を出す．
+この<code>[[fallthrough]]</code>属性はフォールスルーが意図的であることを伝えると同時に，プログラマにとってもフォールスルーを見つけやすくするものである．</p>
+
+<pre><code class="language-cpp">switch (N) {
+  case 1:
+    // do something
+    [[fallthrough]]
+  case 2:
+    break;
+  default:
+}
+</code></pre>
+<p>なお，最後のcaseやdefaultに記述するとコンパイルエラーとなる</p>
+
 <h3 id="coming-soon">Coming Soon</h3>
 <ul>
   <li><a href="https://cpprefjp.github.io/lang/cpp11/attributes.html">属性構文(C++11)</a>
     <ul>
-      <li><a href="https://cpprefjp.github.io/lang/cpp17/nodiscard.html">nodicard(C++17)</a></li>
       <li><a href="https://cpprefjp.github.io/lang/cpp17/fallthrough.html">fallthrough(c++17)</a></li>
       <li><a href="https://cpprefjp.github.io/lang/cpp20/language_support_for_empty_objects.html">no_unique_adress(c++20)</a></li>
       <li><a href="https://cpprefjp.github.io/lang/cpp20/likely_and_unlikely_attributes.html">likely, unlikely (c++20)</a></li>
@@ -882,7 +898,7 @@ function n(n,t,e){n.addEventListener?n.addEventListener(t,e):n.attachEvent("on"+
 },{}],"eoMl":[function(require,module,exports) {
 "use strict";var e=u(require("./wrapify")),d=u(require("dom101/add-class")),t=u(require("dom101/on"));function u(e){return e&&e.__esModule?e:{default:e}}var a,o=document.querySelector("[data-js-main-body]");function r(){a||((0,d.default)(document.documentElement,"LoadDone"),a=!0)}o&&((0,e.default)(o),(0,d.default)(o,"-wrapified")),(0,t.default)(window,"load",r),setTimeout(r,5e3);
 },{"./wrapify":"hE9p","dom101/add-class":"G20n","dom101/on":"DJ2P"}]},{},["eoMl"], null)</script>
-<script src='./assets/packed/app.js?t=20221015122649'></script>
+<script src='./assets/packed/app.js?t=20221015123634'></script>
 
 
 

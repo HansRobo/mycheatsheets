@@ -387,9 +387,26 @@ C++20では更に以下の改良が加わっている
 - [コンストラクタのオーバーロードごとに付加出来るように](https://cpprefjp.github.io/lang/cpp20/nodiscard_for_constructors.html)
 - [警告の理由の文字列を付加できるように](https://cpprefjp.github.io/lang/cpp20/nodiscard_should_have_a_reason.html)
 
+### [fallthrough(c++17)](https://cpprefjp.github.io/lang/cpp17/fallthrough.html)
+
+switch-case文においてcaseの次にbreak文を置かないことで連続の複数のcaseに渡ってプログラムが実行されること（fallthrough）は，
+しばしば悪用されるが，プログラマが見落としやすくバグにもつながりやすい．そのため，コンパイラはフォールスルーを検知すると警告を出す．
+この`[[fallthrough]]`属性はフォールスルーが意図的であることを伝えると同時に，プログラマにとってもフォールスルーを見つけやすくするものである．
+
+```cpp
+switch (N) {
+  case 1:
+    // do something
+    [[fallthrough]]
+  case 2:
+    break;
+  default:
+}
+```
+なお，最後のcaseやdefaultに記述するとコンパイルエラーとなる
+
 ### Coming Soon
 - [属性構文(C++11)](https://cpprefjp.github.io/lang/cpp11/attributes.html)
-  - [nodicard(C++17)](https://cpprefjp.github.io/lang/cpp17/nodiscard.html)
   - [fallthrough(c++17)](https://cpprefjp.github.io/lang/cpp17/fallthrough.html)
   - [no_unique_adress(c++20)](https://cpprefjp.github.io/lang/cpp20/language_support_for_empty_objects.html)
   - [likely, unlikely (c++20)](https://cpprefjp.github.io/lang/cpp20/likely_and_unlikely_attributes.html)

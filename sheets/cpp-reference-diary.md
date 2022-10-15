@@ -371,10 +371,24 @@ enum class [[maybe_unused]] E {
 void func1([[maybe_unused]]int unused_arg){}
 void func2(int){}
 ```
+
+### [nodicard(C++17)](https://cpprefjp.github.io/lang/cpp17/nodiscard.html)
+
+「関数の戻り値を破棄してはいけない」という情報をコンパイラに伝え，エラー処理など本来無視してはならない戻り値の意図しない無視をプログラマに警告として伝えるための属性である．
+
+関数に使用した場合，その返り値を無視すると警告を発するようになる．
+クラス，構造体，列挙型の宣言に対して指定した場合，その型の返り値を無視すると警告を発する．
+
+```cpp
+struct [[nodiscard]] error_info{};
+[[nodiscard]] int func(){return 0;}
+```
+C++20では更に以下の改良が加わっている
+- [コンストラクタのオーバーロードごとに付加出来るように](https://cpprefjp.github.io/lang/cpp20/nodiscard_for_constructors.html)
+- [警告の理由の文字列を付加できるように](https://cpprefjp.github.io/lang/cpp20/nodiscard_should_have_a_reason.html)
+
 ### Coming Soon
 - [属性構文(C++11)](https://cpprefjp.github.io/lang/cpp11/attributes.html)
-  - [deprecated(C++14)](https://cpprefjp.github.io/lang/cpp14/deprecated_attr.html)
-  - [maybe_unused(C++17)](https://cpprefjp.github.io/lang/cpp17/maybe_unused.html)
   - [nodicard(C++17)](https://cpprefjp.github.io/lang/cpp17/nodiscard.html)
   - [fallthrough(c++17)](https://cpprefjp.github.io/lang/cpp17/fallthrough.html)
   - [no_unique_adress(c++20)](https://cpprefjp.github.io/lang/cpp20/language_support_for_empty_objects.html)

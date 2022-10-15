@@ -311,7 +311,7 @@ if ( beginメンバ関数が存在 AND endメンバ関数が存在 ){
 - [no_unique_adress(c++20)](https://cpprefjp.github.io/lang/cpp20/language_support_for_empty_objects.html)
 - [likely, unlikely (c++20)](https://cpprefjp.github.io/lang/cpp20/likely_and_unlikely_attributes.html)
 
-### [[[noreturn]]属性(C++11)](https://cpprefjp.github.io/lang/cpp11/attributes.html#noreturn)
+### [noreturn属性(C++11)](https://cpprefjp.github.io/lang/cpp11/attributes.html#noreturn)
 
 ⇒警告抑制タイプの属性：「関数が返らないパスが存在する」という警告を抑制  
 ⇒最適化促進タイプの属性：制約を増して最適化に寄与  
@@ -324,7 +324,7 @@ if ( beginメンバ関数が存在 AND endメンバ関数が存在 ){
 関数が決して返らない（=必ず例外が投げられる？）ことをコンパイラに伝える  
 この属性がついた関数が返る場合の動作は未定義
 
-### [[[carries_dependency]]属性(C++11)](https://cpprefjp.github.io/lang/cpp11/attributes.html#carries_dependency)
+### [carries_dependency属性(C++11)](https://cpprefjp.github.io/lang/cpp11/attributes.html#carries_dependency)
 
 TBD  
 
@@ -332,7 +332,7 @@ TODO:
 - [std::atomic](https://cpprefjp.github.io/reference/atomic/atomic.html)
 - [std::memory_order](https://cpprefjp.github.io/reference/atomic/memory_order.html)
 
-### [deprecated(C++14)](https://cpprefjp.github.io/lang/cpp14/deprecated_attr.html)
+### [deprecated属性(C++14)](https://cpprefjp.github.io/lang/cpp14/deprecated_attr.html)
 ```cpp
 [[deprecated("please use new_func() function")]] void old_func() {}
 ```
@@ -348,7 +348,7 @@ TODO:
 - テンプレートの特殊化
 
 
-### [maybe_unused(C++17)](https://cpprefjp.github.io/lang/cpp17/maybe_unused.html)
+### [maybe_unused属性(C++17)](https://cpprefjp.github.io/lang/cpp17/maybe_unused.html)
 
 ⇒警告抑制タイプの属性：意図して使ってない要素に対してコンパイラに文句を言わせない   
 
@@ -372,7 +372,7 @@ void func1([[maybe_unused]]int unused_arg){}
 void func2(int){}
 ```
 
-### [nodicard(C++17)](https://cpprefjp.github.io/lang/cpp17/nodiscard.html)
+### [nodiscard属性(C++17)](https://cpprefjp.github.io/lang/cpp17/nodiscard.html)
 
 「関数の戻り値を破棄してはいけない」という情報をコンパイラに伝え，エラー処理など本来無視してはならない戻り値の意図しない無視をプログラマに警告として伝えるための属性である．
 
@@ -387,7 +387,7 @@ C++20では更に以下の改良が加わっている
 - [コンストラクタのオーバーロードごとに付加出来るように](https://cpprefjp.github.io/lang/cpp20/nodiscard_for_constructors.html)
 - [警告の理由の文字列を付加できるように](https://cpprefjp.github.io/lang/cpp20/nodiscard_should_have_a_reason.html)
 
-### [fallthrough(c++17)](https://cpprefjp.github.io/lang/cpp17/fallthrough.html)
+### [fallthrough属性(C++17)](https://cpprefjp.github.io/lang/cpp17/fallthrough.html)
 
 switch-case文においてcaseの次にbreak文を置かないことで連続の複数のcaseに渡ってプログラムが実行されること（fallthrough）は，
 しばしば悪用されるが，プログラマが見落としやすくバグにもつながりやすい．そのため，コンパイラはフォールスルーを検知すると警告を出す．

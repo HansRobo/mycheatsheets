@@ -35,8 +35,8 @@
 
 
 
-  <meta content='https://assets.devhints.io/previews/ros_tools.jpg?t=20221015124130' property='og:image'>
-  <meta content='https://assets.devhints.io/previews/ros_tools.jpg?t=20221015124130' property='twitter:image'>
+  <meta content='https://assets.devhints.io/previews/ros_tools.jpg?t=20221030153407' property='og:image'>
+  <meta content='https://assets.devhints.io/previews/ros_tools.jpg?t=20221030153407' property='twitter:image'>
   <meta content='900' property='og:image:width'>
   <meta content='471' property='og:image:height'>
 
@@ -105,11 +105,11 @@ gtag('config','UA-106902774-1');
 <!-- deferred css -->
 <script id='deferred-css'>;(function(links){(requestAnimationFrame||mozRequestAnimationFrame||webkitRequestAnimationFrame||msRequestAnimationFrame||(function(fn){window.addEventListener('load',fn)}))(function(){var h=document.getElementsByTagName('head')[0],l,i;for (i=0;i<links.length;i++){l=document.createElement('link');l.rel='stylesheet';l.href=links[i];h.appendChild(l);}})})([
 'https://fonts.googleapis.com/css?family=Cousine',
-'./assets/2017/style.css?t=20221015124130'
+'./assets/2017/style.css?t=20221030153407'
 ])</script>
 <noscript id='deferred-css-fallback'>
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Cousine'>
-<link rel='stylesheet' href='./assets/2017/style.css?t=20221015124130'>
+<link rel='stylesheet' href='./assets/2017/style.css?t=20221030153407'>
 </noscript>
 
     <script type='application/ld+json'>
@@ -121,7 +121,7 @@ gtag('config','UA-106902774-1');
     "@id": "https://google.com/article"
   },
   "headline": "ROS Tools cheatsheet",
-  "image": [ "https://assets.devhints.io/previews/ros_tools.jpg?t=20221015124130" ],
+  "image": [ "https://assets.devhints.io/previews/ros_tools.jpg?t=20221030153407" ],
   "description": "One-page guide to ROS Tools: usage, examples, and more. ros_tools"
 }
 </script>
@@ -284,8 +284,8 @@ ament_auto_package()
 
 <pre><code class="language-bash">ros2 run system_fingerprint imprint
 </code></pre>
-
-<p><a href="https://github.com/MetroRobots/ros_system_fingerprint/tree/ros2">MetroRobots/ros_system_fingerprint</a></p>
+<p>https://github.com/suurjaak/grepros
+<a href="https://github.com/MetroRobots/ros_system_fingerprint/tree/ros2">MetroRobots/ros_system_fingerprint</a></p>
 
 <p>以下のものが出力に含まれる</p>
 
@@ -299,6 +299,34 @@ ament_auto_package()
 </ul>
 
 <p>出力例は<a href="https://github.com/MetroRobots/ros_system_fingerprint/blob/ros2/example_fingerprint.yaml">こちら</a></p>
+
+<h3 id="grepros">grepros</h3>
+
+<p>ROS1/2のbagファイルやtopicをgrepするためのツール</p>
+<pre><code class="language-bash">sudo apt install ros-$ROS_DISTRO-grepros
+</code></pre>
+<p>https://github.com/suurjaak/grepros</p>
+
+<p>メッセージの型やトピック名，frame_idでフィルタリングしたり…</p>
+<pre><code class="language-bash">grepros frame_id=map --type geometry_msgs/* --live
+grepros --topic *lidar* --max-per-topic 1 --live
+</code></pre>
+
+<p>出力結果を新しいbagファイルに書き込んだり…</p>
+<pre><code class="language-bash">grepros --max-per-topic 1 --lines-per-message 30 --live --no-console-output --write my.bag
+</code></pre>
+
+<p>現在のフォルダ以下にあるbagファイルの中で文字列検索が出来たり…</p>
+<pre><code class="language-bash">grepros -r "keyword"
+</code></pre>
+
+<p>topic内容の高度な選択と出力ができる！</p>
+<pre><code class="language-bash"># "name", "message"フィールドのどちらかに"navigation"の文字列を含むtopic frameのheader.stampのみを出力する
+grepros --type diagnostic_msgs/* --select-field name message \
+        --print-field header.stamp -- navigation
+</code></pre>
+
+<p>その他の使用例は<a href="https://suurjaak.github.io/grepros/usage.html">こちら</a></p>
 
         </main>
     </div>
@@ -530,7 +558,7 @@ function n(n,t,e){n.addEventListener?n.addEventListener(t,e):n.attachEvent("on"+
 },{}],"eoMl":[function(require,module,exports) {
 "use strict";var e=u(require("./wrapify")),d=u(require("dom101/add-class")),t=u(require("dom101/on"));function u(e){return e&&e.__esModule?e:{default:e}}var a,o=document.querySelector("[data-js-main-body]");function r(){a||((0,d.default)(document.documentElement,"LoadDone"),a=!0)}o&&((0,e.default)(o),(0,d.default)(o,"-wrapified")),(0,t.default)(window,"load",r),setTimeout(r,5e3);
 },{"./wrapify":"hE9p","dom101/add-class":"G20n","dom101/on":"DJ2P"}]},{},["eoMl"], null)</script>
-<script src='./assets/packed/app.js?t=20221015124130'></script>
+<script src='./assets/packed/app.js?t=20221030153407'></script>
 
 
 

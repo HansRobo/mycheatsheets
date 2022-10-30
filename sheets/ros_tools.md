@@ -87,7 +87,7 @@ ROSのためのシステム状態を一括で出力するコマンド
 ```bash
 ros2 run system_fingerprint imprint
 ```
-
+https://github.com/suurjaak/grepros
 [MetroRobots/ros_system_fingerprint](https://github.com/MetroRobots/ros_system_fingerprint/tree/ros2)
 
 以下のものが出力に含まれる
@@ -100,3 +100,36 @@ ros2 run system_fingerprint imprint
 - ROSワークスペース情報
 
 出力例は[こちら](https://github.com/MetroRobots/ros_system_fingerprint/blob/ros2/example_fingerprint.yaml)
+
+### grepros
+
+ROS1/2のbagファイルやtopicをgrepするためのツール
+```bash
+sudo apt install ros-$ROS_DISTRO-grepros
+```
+https://github.com/suurjaak/grepros
+
+メッセージの型やトピック名，frame_idでフィルタリングしたり...
+```bash
+grepros frame_id=map --type geometry_msgs/* --live
+grepros --topic *lidar* --max-per-topic 1 --live
+```
+
+出力結果を新しいbagファイルに書き込んだり...
+```bash
+grepros --max-per-topic 1 --lines-per-message 30 --live --no-console-output --write my.bag
+```
+
+現在のフォルダ以下にあるbagファイルの中で文字列検索が出来たり...
+```bash
+grepros -r "keyword"
+```
+
+topic内容の高度な選択と出力ができる！
+```bash
+# "name", "message"フィールドのどちらかに"navigation"の文字列を含むtopic frameのheader.stampのみを出力する
+grepros --type diagnostic_msgs/* --select-field name message \
+        --print-field header.stamp -- navigation
+```
+
+その他の使用例は[こちら](https://suurjaak.github.io/grepros/usage.html)

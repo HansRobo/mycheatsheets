@@ -38,3 +38,26 @@ ROS2対応はゆっくりなので，TIERIVフォークの方が良い
 ROS2のパラメータをライブラリに固めて配布したり出来るライブラリ
 
 [PickNikRobotics/generate_parameter_library](https://github.com/PickNikRobotics/generate_parameter_library)
+
+### rosros
+
+ROS1/2の統一的Pythonインタフェースを提供するパッケージ
+https://github.com/suurjaak/rosros
+
+環境変数からROSバージョンを自動切り替えできる！
+以下のようにpub/subはもちろんのこと，serviceやparameterなどにも対応する
+
+
+```python
+import rosros
+
+def on_trigger(req):
+    pub.publish(True)
+    return {"success": True, "message": "Triggered!"}
+
+rosros.init_node("mynode")
+params = rosros.init_params(service="/trigger", topic="/triggerings")
+srv = rosros.create_service(params["service"], "std_srvs/Trigger", on_trigger)
+pub = rosros.create_publisher(params["topic"], "std_msgs/Bool", latch=True, queue_size=2)
+rosros.spin()
+```
